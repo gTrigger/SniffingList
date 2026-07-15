@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'Montserrat';
+
+    src: url('../public/fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
+
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rhythmic';
+
+    src: url('../public/fonts/Rhythmic/RhythmicSVG.otf') format('opentype');
+
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    margin: 0;
+}
+
+:root {
+    --primaryFont: Montserrat, sans-serif;
+    --secondaryFont: Arial, sans-serif;
+    --accentFont: Rhythmic, sans-serif;
+
+    --primaryFontColor: 0, 0, 0;
+    --secondaryFontColor: 255, 255, 255;
+
+    --primaryFontSize: .9rem;
+    --secondaryFontSize: .75rem;
+
+    --primaryOpacity: 1;
+    --secondaryOpacity: .75;
+    --tertiaryOpacity: .5;
+
+    --title-font-size: var(--primaryFontSize);
+    --title-font: var(--primaryFont);
+
+    --subtitle-font-size: var(--secondaryFontSize);
+    --subtitle-font: var(--primaryFont);
+
+    --button-font-size: var(--secondaryFontSize);
+    --button-color: rgba(var(--primaryFontColor), var(--secondaryOpacity));
+    --button-color-hover: rgba(var(--primaryFontColor), var(--primaryOpacity));
+    --button-font: var(--secondaryFont);
+
+    --base-spacing-unit: 2px;
+    --base-spacing-unit-2x: 4px;
+    --base-spacing-unit-4x: 8px;
+    --base-spacing-unit-8x: 16px;
+    --base-spacing-unit-12x: 24px;
+    --base-spacing-unit-16x: 32px;
+
+    --default-border-radius: var(--base-spacing-unit-4x);
+    --default-blur-filter: blur(10px);
+
+    --card-width: 175px;
+    --card-height: 225px;
+
+    --modal-width: 300px;
+    --modal-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+
+    --icon-button-width: 30px;
+    --icon-button-height: 30px;
+}
+
+.cardTitle {
+    font-size: var(--title-font-size);
+    font-family: var(--title-font), sans-serif;
+}
+
+.cardSubtitle {
+    font-size: var(--subtitle-font-size);
+    font-family: var(--subtitle-font), sans-serif;
+}
+
+.modalTitle {
+    font-size: var(--title-font-size);
+    font-family: var(--title-font), sans-serif;
+    color: rgba(var(--primaryFontColor), var(--primaryOpacity));
+}
+
+.subtitle, .modalSubtitle {
+    font-size: var(--subtitle-font-size);
+    font-family: var(--subtitle-font), sans-serif;
+    color: rgba(var(--primaryFontColor), var(--secondaryOpacity));
+}
+
+
+.screenReaderOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}

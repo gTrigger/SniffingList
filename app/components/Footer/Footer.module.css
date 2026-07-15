@@ -1,0 +1,24 @@
+.footer {
+    background: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--base-spacing-unit-4x);
+    padding: var(--base-spacing-unit-4x) var(--base-spacing-unit-16x);
+    margin: 0 auto;
+    position: sticky;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5);
+    will-change: backdrop-filter;
+    backdrop-filter: var(--default-blur-filter);
+}
+
+.footer .socialLink {
+    color: rgba(var(--primaryFontColor), var(--tertiaryOpacity));
+    writing-mode: vertical-lr;
+}
+
+.footer .socialLink:hover {
+    color: rgba(var(--primaryFontColor), var(--secondaryOpacity));
+}

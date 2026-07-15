@@ -1,0 +1,18 @@
+.container {
+    max-width: 1200px;
+    padding: 0 30px 30px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.stats {
+    text-align: center;
+}

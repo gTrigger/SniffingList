@@ -1,0 +1,20 @@
+.inputWrapper {
+    border-bottom: 1px solid black;
+}
+
+.input {
+    font-family: Montserrat, sans-serif;
+    border: none;
+    background: transparent;
+    color: #333;
+    width: 200px;
+    padding: var(--base-spacing-unit-4x) var(--base-spacing-unit);
+    box-sizing: border-box;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.label {
+    visibility: hidden;
+    position: absolute;
+}

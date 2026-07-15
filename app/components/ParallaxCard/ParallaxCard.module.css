@@ -1,0 +1,171 @@
+.cardWrap {
+    --hoverEasing: cubic-bezier(0.23, 1, 0.32, 1);
+    --returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    --slideContentHeight: 140px;
+    --headerTopPosition: 10px;
+    --cardBackgroundPerspective: 600px;
+    --cardBackgroundMargin: 20px;
+    --cardGradient: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, 0.85) 100%);
+    --cardShadow: rgba(0, 0, 0, 0.66) 0 10px 20px 0;
+
+    cursor: initial;
+    width: var(--card-width);
+    border-radius: var(--default-border-radius);
+    margin: 0;
+    flex: 0 0 var(--card-width);
+    transform: perspective(var(--cardBackgroundPerspective));
+    transform-style: preserve-3d;
+}
+
+.card {
+    width: 100%;
+    height: var(--card-height);
+    border-radius: var(--default-border-radius);
+    box-shadow: var(--cardShadow);
+    position: relative;
+    overflow: hidden;
+    background-clip: padding-box;
+    transition: transform 1s var(--returnEasing), box-shadow 1s var(--returnEasing);
+}
+
+.cardBg {
+    pointer-events: none;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    top: -20px;
+    left: -20px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s var(--returnEasing), opacity 1s var(--returnEasing);
+}
+
+.cardContent {
+    width: 100%;
+    padding: var(--base-spacing-unit-8x);
+    top: var(--slideContentHeight);
+    left: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: var(--base-spacing-unit-4x);
+    box-sizing: border-box;
+    z-index: 2;
+    color: #fff;
+    transition: top 0.6s var(--hoverEasing);
+}
+
+.cardContent::after {
+    content: '';
+    position: absolute;
+    top: calc(var(--headerTopPosition) * -1);
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: var(--card-height);
+    background-image: var(--cardGradient);
+    opacity: 1;
+    transition: none;
+}
+
+.perfumeBrand {
+    font-family: "Arial", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    font-size: 70%;
+}
+
+.perfumeTitle {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    font-size: var(--title-font-size);
+}
+
+.cardSlideContent {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.6s var(--hoverEasing);
+    display: flex;
+    flex-direction: column;
+    gap: var(--base-spacing-unit-4x);
+}
+
+.cardWrap:hover .cardContent {
+    top: var(--headerTopPosition);
+}
+
+.cardWrap:hover .cardSlideContent {
+    opacity: 1;
+    max-height: 180px;
+}
+
+.cardWrap:hover .cardBg {
+    transition: 0.6s var(--hoverEasing), opacity 1s var(--hoverEasing);
+    opacity: 1;
+}
+
+.cardWrap:hover .card {
+    transition: 0.6s var(--hoverEasing);
+}
+
+.cardWrap:hover .removeButton {
+    opacity: 1;
+}
+
+.cardWrap .removeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    transition: 0.4s;
+    z-index: 100;
+    background: none;
+    transform: translateZ(50px);
+    opacity: 0;
+}
+
+.cardWrap .removeButton:hover {
+    color: white;
+}
+
+.cardWrap .removeButton:focus {
+    opacity: 1;
+    border: none;
+}
+
+.tagsInner {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: var(--base-spacing-unit-4x);
+}
+
+.tagHeading {
+    font-size: .6rem;
+    color: rgba(255, 255, 255, .8);
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.tagText {
+    font-size: .7rem;
+    color: rgba(255, 255, 255, .9);
+    margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cardWrap {
+        perspective: none;
+    }
+    .card, .cardBg {
+        transition: none !important;
+        transform: none !important;
+    }
+}

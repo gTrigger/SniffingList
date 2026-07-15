@@ -1,0 +1,74 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.5);
+    will-change: backdrop-filter;
+    backdrop-filter: var(--default-blur-filter);
+}
+
+.mainPanel {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 16px 30px 4px;
+}
+
+.mainPanel h1 {
+    font-family: var(--accentFont);
+    font-size: 60px;
+    margin: 0;
+}
+
+.toggleButton {
+    background: none;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    color: rgba(0, 0, 0, 0.5);
+    align-self: center;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toggleButton:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
+.toggleButton.active {
+    transform: rotate(-180deg);
+}
+
+.expandablePanel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease-in-out, padding 0.3s ease-out;
+    padding: 0 30px;
+    overflow: hidden;
+}
+
+.expandablePanel.open {
+    grid-template-rows: 1fr;
+    padding: 4px 30px;
+}
+
+.panelInner {
+    display: flex;
+    flex-direction: column;
+    column-gap: var(--base-spacing-unit-8x);
+    row-gap: var(--base-spacing-unit-4x);
+    min-height: 0;
+}
+
+.expandablePanel.open .panelInner {
+    overflow: visible;
+}

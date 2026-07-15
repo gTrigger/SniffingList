@@ -1,0 +1,44 @@
+.selectWrapper {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    border-bottom: 1px solid black;
+}
+
+.selectWrapper.small {
+    width: 60px;
+}
+
+.selectWrapper select {
+    flex: 1;
+    width: 100%;
+    background: transparent;
+    padding: 8px 16px 8px 0;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    text-indent: -2px;
+    cursor: pointer;
+    border-color: transparent;
+}
+
+.selectWrapper button {
+    margin-left: 4px;
+    vertical-align: middle;
+    color: black;
+}
+
+.selectWrapper button:hover {
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+.selectWrapper button svg {
+    width: 12px;
+    height: 12px;
+    vertical-align: middle;
+}
+
+.selectWrapper .label {
+    visibility: hidden;
+    position: absolute;
+}

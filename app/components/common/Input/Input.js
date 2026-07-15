@@ -1,0 +1,21 @@
+"use client";
+
+import styles from "./Input.module.css";
+
+export default function Input({ value, id, label, placeholder, isDisabled, onChange }) {
+    return (
+        <div className={styles.inputWrapper}>
+            {label && <label htmlFor={id} className={styles.label}>{ label }</label>}
+            <input
+                id={id}
+                className={styles.input}
+                type="text"
+                value={value}
+                placeholder={placeholder}
+                disabled={isDisabled}
+                onChange={onChange}
+                aria-label={label ? label : placeholder}
+            />
+        </div>
+    );
+}
