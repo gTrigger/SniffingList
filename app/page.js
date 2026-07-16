@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, Suspense } from "react";
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import { i18n } from "./i18n";
 import { useAppSettingsStore } from "./store/useAppSettingsStore";
@@ -10,7 +10,7 @@ import styles from "./page.module.css";
 import ParallaxCard from "./components/ParallaxCard/ParallaxCard";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
-export default function Home() {
+function HomeContent() {
     const observer = useRef(null);
     const router = useRouter();
     const pathname = usePathname();
@@ -45,7 +45,6 @@ export default function Home() {
         if (filterNote) params.set('note', filterNote); else params.delete('note');
 
         router.replace(`${pathname}?${params.toString()}`);
-
     }, [searchQuery, sortOrder, filterBrand, filterGroup, filterNote, router, pathname]);
 
     useEffect(() => {
@@ -116,5 +115,13 @@ export default function Home() {
 
             <ScrollToTop />
         </div>
+    );
+}
+
+export default function Home() {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <HomeContent />
+        </Suspense>
     );
 }
