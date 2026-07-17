@@ -7,8 +7,8 @@ export default function CancelIcon(props) {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            width="16"
-            height="16"
+            width="30"
+            height="30"
             {...props}
         >
             <line x1="18" y1="6" x2="6" y2="18" />

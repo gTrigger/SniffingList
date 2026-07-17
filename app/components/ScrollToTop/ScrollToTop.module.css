@@ -1,20 +1,24 @@
 .scrollButton {
     position: fixed;
-    bottom: 40px;
+    bottom: 50px;
     right: 5vw;
     z-index: 1000;
-    width: 32px;
-    height: 32px;
-    color: white;
+    width: 45px;
+    height: 45px;
+    color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.3s ease;
     text-align: center;
     border-radius: 50%;
-    background: rgba(150, 150, 150, 0.5);
+    background: rgba(255, 255, 255, 0.5);
     will-change: backdrop-filter;
     backdrop-filter: var(--default-blur-filter);
+    font-family: var(--accentFont);
+    font-size: 50px;
+    padding-left: 4px;
+    padding-top: 20px;
 }
 
 .scrollButton.visible {

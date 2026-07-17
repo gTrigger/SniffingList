@@ -11,8 +11,9 @@ export default function RootLayout({ children }) {
                 <main>
                     {children}
                 </main>
-                <Toast />
                 <Footer />
+                <Toast />
+                <div id="toast-portal" />
             </body>
         </html>
     );

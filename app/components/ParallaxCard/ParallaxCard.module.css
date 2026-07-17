@@ -1,7 +1,7 @@
 .cardWrap {
     --hoverEasing: cubic-bezier(0.23, 1, 0.32, 1);
     --returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    --slideContentHeight: 140px;
+    --slideContentHeight: 200px;
     --headerTopPosition: 10px;
     --cardBackgroundPerspective: 600px;
     --cardBackgroundMargin: 20px;
@@ -74,7 +74,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     opacity: 0.8;
-    font-size: 70%;
+    font-size: var(--secondaryFontSize);
 }
 
 .perfumeTitle {
@@ -100,7 +100,7 @@
 
 .cardWrap:hover .cardSlideContent {
     opacity: 1;
-    max-height: 180px;
+    max-height: 240px;
 }
 
 .cardWrap:hover .cardBg {
@@ -118,9 +118,9 @@
 
 .cardWrap .removeButton {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    color: rgba(255, 255, 255, 0.7);
+    top: 30px;
+    right: 30px;
+    color: rgba(255, 255, 255, 1);
     border: none;
     cursor: pointer;
     transition: 0.4s;
@@ -128,6 +128,9 @@
     background: none;
     transform: translateZ(50px);
     opacity: 0;
+    filter: invert(100%) brightness(500%);
+    font-family: var(--accentFont);
+    font-size: 30px;
 }
 
 .cardWrap .removeButton:hover {
@@ -147,17 +150,11 @@
 }
 
 .tagHeading {
-    font-size: .6rem;
+    font-size: var(--quaternaryFontSize);
     color: rgba(255, 255, 255, .8);
     margin: 0;
     text-transform: uppercase;
     text-align: center;
-}
-
-.tagText {
-    font-size: .7rem;
-    color: rgba(255, 255, 255, .9);
-    margin: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -7,8 +7,8 @@ export default function CancelIcon(props) {
             strokeWidth="2.5"
             strokeLinecap="round"
             strokeLinejoin="round"
-            width="16"
-            height="16"
+            width="30"
+            height="30"
             {...props}
         >
             <polyline points="6 9 12 15 18 9"></polyline>

@@ -9,6 +9,9 @@ import { useFilterStore } from './store/useFilterStore';
 import styles from "./page.module.css";
 import ParallaxCard from "./components/ParallaxCard/ParallaxCard";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import AddPerfumePopup from "@/components/Popups/AddPerfumePopup/AddPerfumePopup";
+import LoadCollectionPopup from "@/components/Popups/LoadCollectionPopup/LoadCollectionPopup";
+import Button from "@/components/common/Button/Button";
 
 function HomeContent() {
     const observer = useRef(null);
@@ -16,6 +19,9 @@ function HomeContent() {
     const pathname = usePathname();
     const searchParams = useSearchParams();
     const [isMounted, setIsMounted] = useState(false);
+
+    const [isAddPerfumePopupOpen, setIsAddPerfumePopupOpen] = useState(false);
+    const [isLoadCollectionPopupOpen, setIsLoadCollectionPopupOpen] = useState(false);
 
     const [visibleCount, setVisibleCount] = useState(12);
 
@@ -94,26 +100,64 @@ function HomeContent() {
 
     return (
         <div className={styles.container}>
-            <div className={`${styles.stats} subtitle`}>
-                {searchQuery || filterBrand || filterGroup || filterNote ? (
-                    <p>{i18n[locale]?.found}: {filteredItems.length} {i18n[locale]?.of} {items.length}</p>
-                ) : (
-                    <p>{i18n[locale]?.total}: {items.length}</p>
-                )}
-            </div>
+            {items.length === 0 && (
+                <div className={styles.emptyCollection}>
+                    <img src={'/assets/EmptyCollection.gif'} alt={i18n[locale]?.emptyCollection}/>
 
-            <div className={styles.grid}>
-                {displayedItems.map((item, index) => (
-                    <div ref={index === displayedItems.length - 1 ? lastItemRef : null} key={item.id}>
-                        <ParallaxCard
-                            item={item}
-                            onDeleteClick={handleRemoveOne}
+                    <div className="title">{i18n[locale]?.emptyCollectionTitle} 👁👄👁</div>
+                    <p className="subtitle">
+                        {i18n[locale]?.emptyCollectionSubtitle}
+                        &nbsp;
+                        <Button
+                            className={styles.linkButton}
+                            label={i18n[locale]?.emptyCollectionSubtitleAddPerfume}
+                            onClick={() => setIsAddPerfumePopupOpen(true)}
                         />
+                        &nbsp;
+                        {i18n[locale]?.or}
+                        &nbsp;
+                        <Button
+                            className={styles.linkButton}
+                            label={i18n[locale]?.emptyCollectionSubtitleLoadCollection}
+                            onClick={() => setIsLoadCollectionPopupOpen(true)}
+                        />
+                        ?
+                    </p>
+                </div>
+            )}
+            {items.length > 0 && (
+                <>
+                    <div className={`${styles.stats} subtitle`}>
+                        {searchQuery || filterBrand || filterGroup || filterNote ? (
+                            <p>{i18n[locale]?.found}: {filteredItems.length} {i18n[locale]?.of} {items.length}</p>
+                        ) : (
+                            <p>{i18n[locale]?.total}: {items.length}</p>
+                        )}
                     </div>
-                ))}
-            </div>
 
-            <ScrollToTop />
+                    <div className={styles.grid}>
+                        {displayedItems.map((item, index) => (
+                            <div ref={index === displayedItems.length - 1 ? lastItemRef : null} key={item.id}>
+                                <ParallaxCard
+                                    item={item}
+                                    onDeleteClick={handleRemoveOne}
+                                />
+                            </div>
+                        ))}
+                    </div>
+
+                    <ScrollToTop />
+                </>
+            )}
+            <AddPerfumePopup
+                isOpen={isAddPerfumePopupOpen}
+                onClose={() => setIsAddPerfumePopupOpen(false)}
+            />
+
+            <LoadCollectionPopup
+                isOpen={isLoadCollectionPopupOpen}
+                onClose={() => setIsLoadCollectionPopupOpen(false)}
+            />
         </div>
     );
 }

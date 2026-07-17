@@ -1,23 +1,43 @@
 .container {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 40px;
+    right: 40px;
     z-index: 9999;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: var(--base-spacing-unit-4x);
 }
 
 .toast {
-    padding: 12px 20px;
-    background: #333;
-    color: #fff;
+    padding: var(--base-spacing-unit-4x);
     border-radius: var(--default-border-radius);
     animation: slideIn 0.3s ease;
+    background: rgba(255, 255, 255, 0.5);
+    will-change: backdrop-filter;
+    backdrop-filter: var(--default-blur-filter);
+    color: var(--button-color);
+    font-size: var(--secondaryFontSize);
+    display: flex;
+    justify-content: space-between;
+    gap: var(--base-spacing-unit-8x);
+    width: fit-content;
+    align-self: flex-end;
 }
 
-.error { background: #dea9a9; }
-.success { background: #a7dab6; }
+.toast span {
+    font-family: var(--accentFont);
+    font-size: 30px;
+    display: inline-block;
+    transform: translateY(4px);
+}
+
+.error svg { color: #770202; }
+.success svg { color: #005419; }
+
+.toast .closeButton {
+    font-family: var(--accentFont);
+    font-size: 30px;
+}
 
 @keyframes slideIn {
     from { transform: translateX(100%); opacity: 0; }

@@ -1,45 +1,12 @@
 .controlPanel {
     display: flex;
-    gap: 16px;
+    gap: var(--base-spacing-unit-8x);
     flex-direction: column;
 }
 
 .panelRow {
     display: flex;
-    column-gap: 16px;
-    row-gap: 8px;
+    column-gap: var(--base-spacing-unit-8x);
+    row-gap: var(--base-spacing-unit-4x);
     flex-wrap: wrap;
-}
-
-.addPerfumeForm {
-    display: flex;
-    gap: 16px;
-}
-
-.loader {
-    max-width: 200px;
-    max-height: 200px;
-    align-self: center;
-    margin: 16px;
-}
-
-.previewCard {
-    align-self: center;
-    margin-bottom: 24px !important;
-}
-
-.previewActions {
-    display: flex;
-    gap: 16px;
-    text-align: center;
-}
-
-.buttonWrapper {
-    display: flex;
-    flex-flow: column;
-    align-items: end;
-}
-
-.buttonWrapper button {
-    align-self: end;
 }

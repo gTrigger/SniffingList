@@ -11,7 +11,7 @@ const iconLibrary = {
     link: <LinkIcon aria-hidden="true" />,
 };
 
-export default function Button({ label, icon, onClick, className = '', isDisabled = false, isHidden = false }) {
+export default function Button({ label, ariaLabel, icon, onClick, className = '', isDisabled = false, isHidden = false }) {
     const iconToRender = icon ? iconLibrary[icon] : null;
 
     return (
@@ -21,7 +21,7 @@ export default function Button({ label, icon, onClick, className = '', isDisable
             disabled={isDisabled}
             onClick={onClick}
             title={icon ? label : undefined}
-            aria-label={label ? label : icon}
+            aria-label={ariaLabel ? ariaLabel : label}
         >
             {icon ? iconToRender : label}
         </button>

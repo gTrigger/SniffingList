@@ -32,9 +32,9 @@ export default function ScrollToTop() {
 
     return (
         <Button
-            icon="arrow"
-            label={i18n[locale].scrollToTop}
             className={`${styles.scrollButton} ${isVisible ? styles.visible : ''}`}
+            label={'^'}
+            ariaLabel={i18n[locale].scrollToTop}
             onClick={scrollToTop}
         />
     );

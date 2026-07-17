@@ -19,7 +19,15 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;
+}
+
+main {
+    display: flex;
+    flex: 1;
 }
 
 :root {
@@ -30,8 +38,10 @@ body {
     --primaryFontColor: 0, 0, 0;
     --secondaryFontColor: 255, 255, 255;
 
-    --primaryFontSize: .9rem;
-    --secondaryFontSize: .75rem;
+    --primaryFontSize: 1.4rem;
+    --secondaryFontSize: 1.2rem;
+    --tertiaryFontSize: .9rem;
+    --quaternaryFontSize: .8rem;
 
     --primaryOpacity: 1;
     --secondaryOpacity: .75;
@@ -58,10 +68,10 @@ body {
     --default-border-radius: var(--base-spacing-unit-4x);
     --default-blur-filter: blur(10px);
 
-    --card-width: 175px;
-    --card-height: 225px;
+    --card-width: 250px;
+    --card-height: 300px;
 
-    --modal-width: 300px;
+    --modal-width: 450px;
     --modal-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 
     --icon-button-width: 30px;
@@ -78,7 +88,7 @@ body {
     font-family: var(--subtitle-font), sans-serif;
 }
 
-.modalTitle {
+.title, .modalTitle {
     font-size: var(--title-font-size);
     font-family: var(--title-font), sans-serif;
     color: rgba(var(--primaryFontColor), var(--primaryOpacity));
@@ -100,4 +110,9 @@ body {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
+}
+
+#toast-portal {
+     position: fixed;
+     z-index: 9999;
 }

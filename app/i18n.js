@@ -14,6 +14,11 @@ export const i18n = {
         cancelSelection: "Очистить выбор",
         githubLink: "Ссылка на GitHub",
         linkedInLink: "Ссылка на LinkedIn",
+        emptyCollection: "Пустая коллекция",
+        emptyCollectionTitle: "Тут ничего нет",
+        emptyCollectionSubtitle: "Давайте попробуем",
+        emptyCollectionSubtitleAddPerfume: "добавить новый парфюм",
+        emptyCollectionSubtitleLoadCollection: "загрузить существующую коллекцию",
 
         // control panel
         searchInput: "Поиск",
@@ -28,12 +33,12 @@ export const i18n = {
         allGroups: "Все группы",
         allNotes: "Все ноты",
         reset: "Сбросить фильтры",
-        toggleControlPanel: "Переключить панель контроля",
+        toggleExpandablePanel: "Переключить панель контроля",
 
         // remove perfume
         removePerfume: "Удалить парфюм",
         removePerfumeTitle: "Удалить парфюм",
-        removePerfumeSubtitle: "Может не надо? Это действие удалит парфюм из твоей коллекции.",
+        removePerfumeSubtitle: "Вы уверены? Это действие удалит парфюм из вашей коллекции.",
         cancelRemovePerfume: "Нет-нет",
         confirmRemovePerfume: "Да, удаляем",
 
@@ -41,7 +46,7 @@ export const i18n = {
         addPerfume: "Добавить парфюм",
         search: "Поиск",
         findPerfumeTitle: "Добавить парфюм",
-        findPerfumeSubtitle: "Просто введи бренд и название и профиль парфюма будет создан. Это может занять немного времени.",
+        findPerfumeSubtitle: "Просто введите бренд и название и профиль парфюма будет создан. Это может занять немного времени.",
         findPerfumeInputPlaceholder: "Бренд и название парфюма",
         findPerfumeButton: "Искать",
         previewPerfumeProfileTitle: "Похоже на правду?",
@@ -52,7 +57,7 @@ export const i18n = {
         // load collection
         loadCollection: "Загрузить коллекцию",
         loadCollectionTitle: "Загрузить коллекцию",
-        loadCollectionSubtitle: "Это действие перезапишет всю-всю твою коллекцию безвозвратно и заменит на выбранную коллекцию.",
+        loadCollectionSubtitle: "Вы уверены? Это действие перезапишет всю вашу коллекцию (если она есть) безвозвратно и загрузит выбранную коллекцию.",
         importFromJson: "Импорт из JSON",
         loadDefaultCollection: "Загрузить тест-коллекцию",
         cancelLoadCollection: "Нет-нет",
@@ -61,7 +66,7 @@ export const i18n = {
         // clear collection
         removeAll: "Очистить коллекцию",
         clearCollectionTitle: "Очистить коллекцию",
-        clearCollectionSubtitle: "Может не надо? Это действие удалит всю-всю твою коллекцию безвозвратно.",
+        clearCollectionSubtitle: "Вы уверены? Это действие удалит всю-всю вашу коллекцию безвозвратно.",
         cancelClearCollection: "Нет-нет",
         confirmClearCollection: "Да, удаляем",
 
@@ -77,6 +82,7 @@ export const i18n = {
         addPerfumeSuccess: "Успех: новый парфюм был добавлен",
         importFromJsonSuccess: "Успех: импортировано из JSON",
         loadFromDefaultSuccess: "Успех: загружена тестовая коллекция",
+        removeNotification: "Закрыть уведомление"
     },
     en: {
         // general
@@ -93,6 +99,11 @@ export const i18n = {
         cancelSelection: "Cancel selection",
         githubLink: "GitHub Link",
         linkedInLink: "LinkedIn Link",
+        emptyCollection: "Empty collection",
+        emptyCollectionTitle: "Nothing to see here",
+        emptyCollectionSubtitle: "How about",
+        emptyCollectionSubtitleAddPerfume: "adding a new perfume to the collection",
+        emptyCollectionSubtitleLoadCollection: "uploading an existing collection",
 
         // control panel
         searchInput: "Search term",
@@ -107,7 +118,7 @@ export const i18n = {
         allGroups: "All Groups",
         allNotes: "All Notes",
         reset: "Reset filters",
-        toggleControlPanel: "Toggle control panel",
+        toggleExpandablePanel: "Toggle control panel",
 
         // remove perfume
         removePerfume: "Remove perfume",
@@ -124,7 +135,7 @@ export const i18n = {
         findPerfumeInput: "Find perfume",
         findPerfumeInputPlaceholder: "Brand and title of the perfume",
         findPerfumeButton: "Search",
-        previewPerfumeProfileTitle: "Does it look good to you?",
+        previewPerfumeProfileTitle: "Does it look good?",
         cancelAddPerfume: "Cancel",
         retryAddPerfume: "Recheck",
         confirmAddPerfume: "That's it, add it",
@@ -132,7 +143,7 @@ export const i18n = {
         // load collection
         loadCollection: "Load collection",
         loadCollectionTitle: "Load collection",
-        loadCollectionSubtitle: "This action will permanently overwrite your entire collection and replace it with the selected one.",
+        loadCollectionSubtitle: "Are you sure? This action will permanently overwrite your entire collection (if you have one) and load the selected collection.",
         importFromJson: "Import from JSON",
         loadDefaultCollection: "Load test collection",
         cancelLoadCollection: "Nope",
@@ -157,6 +168,7 @@ export const i18n = {
         addPerfumeSuccess: "Success: new perfume was added",
         importFromJsonSuccess: "Success: JSON collection imported",
         loadFromDefaultSuccess: "Success: default collection loaded",
+        removeNotification: "Close notification"
     },
     de: {
         // general
@@ -173,6 +185,11 @@ export const i18n = {
         cancelSelection: "Auswahl aufheben",
         githubLink: "GitHub-Link",
         linkedInLink: "LinkedIn-Link",
+        emptyCollection: "Leere Sammlung",
+        emptyCollectionTitle: "Hier gibt es nichts zu sehen",
+        emptyCollectionSubtitle: "Wie wäre es, wenn Sie",
+        emptyCollectionSubtitleAddPerfume: "ein neues Parfum hinzufügen",
+        emptyCollectionSubtitleLoadCollection: "eine bestehende Sammlung hochladen",
 
         // control panel
         searchInput: "Suche",
@@ -187,13 +204,13 @@ export const i18n = {
         allGroups: "Alle Gruppen",
         allNotes: "Alle Duftnoten",
         reset: "Filter zurücksetzen",
-        toggleControlPanel: "Kontrollpanel umschalten",
+        toggleExpandablePanel: "Kontrollpanel umschalten",
 
         // add perfume
         addPerfume: "Parfum hinzufügen",
         search: "Suche",
         findPerfumeTitle: "Parfum hinzufügen",
-        findPerfumeSubtitle: "Gib einfach Marke und Namen ein, und das Parfum-Profil wird erstellt. Das kann einen Moment dauern.",
+        findPerfumeSubtitle: "Geben Sie einfach Marke und Namen ein, und es wird ein Parfumprofil erstellt. Dies kann einen Moment dauern.",
         findPerfumeInputPlaceholder: "Marke und Parfumname",
         findPerfumeButton: "Suchen",
         previewPerfumeProfileTitle: "Sieht das richtig aus?",
@@ -204,14 +221,14 @@ export const i18n = {
         // remove perfume
         removePerfume: "Parfum entfernen",
         removePerfumeTitle: "Parfum entfernen",
-        removePerfumeSubtitle: "Bist du sicher? Diese Aktion löscht das Parfum aus deiner Sammlung.",
+        removePerfumeSubtitle: "Sind Sie sicher? Diese Aktion entfernt das Parfum dauerhaft aus Ihrer Sammlung.",
         cancelRemovePerfume: "Nein",
         confirmRemovePerfume: "Ja, entfernen",
 
         // load collection
         loadCollection: "Sammlung laden",
         loadCollectionTitle: "Sammlung laden",
-        loadCollectionSubtitle: "Diese Aktion wird deine gesamte Sammlung dauerhaft überschreiben und durch die ausgewählte ersetzen.",
+        loadCollectionSubtitle: "Sind Sie sicher? Dieser Vorgang überschreibt Ihre gesamte Sammlung (sofern eine vorhanden ist) dauerhaft und lädt die ausgewählte Sammlung.",
         importFromJson: "Aus JSON importieren",
         loadDefaultCollection: "Test-Sammlung laden",
         cancelLoadCollection: "Nein-nein",
@@ -220,10 +237,9 @@ export const i18n = {
         // clear collection
         removeAll: "Sammlung leeren",
         clearCollectionTitle: "Sammlung leeren",
-        clearCollectionSubtitle: "Bist du sicher? Diese Aktion löscht deine gesamte Sammlung unwiderruflich.",
+        clearCollectionSubtitle: "Sind Sie sicher? Diese Aktion löscht Ihre gesamte Sammlung.",
         cancelClearCollection: "Nein",
         confirmClearCollection: "Ja, löschen",
-
 
         // notification
         genericError: "Fehler: Etwas ist schiefgelaufen",
@@ -237,5 +253,6 @@ export const i18n = {
         addPerfumeSuccess: "Erfolg: Neues Parfum wurde hinzugefügt",
         importFromJsonSuccess: "Erfolg: Aus JSON importiert",
         loadFromDefaultSuccess: "Erfolg: Test-Sammlung wurde geladen",
+        removeNotification: "Benachrichtigung schließen"
     }
 };

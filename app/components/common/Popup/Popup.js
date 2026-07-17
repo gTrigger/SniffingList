@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "./Popup.module.css";
+import { useEffect } from 'react';
 import { i18n } from "@/i18n";
 import { useAppSettingsStore } from "@/store/useAppSettingsStore";
 import Button from "@/components/common/Button/Button";
@@ -8,10 +9,20 @@ import Button from "@/components/common/Button/Button";
 export default function Popup({ isOpen, onClose, title, subtitle, children, footer }) {
     const { locale } = useAppSettingsStore();
 
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        }
+
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isOpen]);
+
     if (!isOpen) return null;
 
     return (
-        <div
+        <dialog
             className={styles.modalOverlay}
             onClick={onClose}
             role="dialog"
@@ -19,11 +30,11 @@ export default function Popup({ isOpen, onClose, title, subtitle, children, foot
             aria-labelledby="modal-title"
             aria-describedby="modal-subtitle"
         >
-            <div className={`${styles.modalContent} ${isOpen ? styles.open : ''}`} onClick={(e) => e.stopPropagation()}>
+            <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
                 <Button
                     className={styles.closeButton}
-                    icon="cancel"
-                    label={i18n[locale].removePerfume}
+                    label={'x'}
+                    ariaLabel={i18n[locale].removePerfume}
                     onClick={onClose}
                 />
 
@@ -35,6 +46,6 @@ export default function Popup({ isOpen, onClose, title, subtitle, children, foot
 
                 {footer && <div className={styles.modalFooter}>{footer}</div>}
             </div>
-        </div>
+        </dialog>
     );
 }

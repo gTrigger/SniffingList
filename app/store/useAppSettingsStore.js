@@ -4,7 +4,7 @@ import { persist } from 'zustand/middleware';
 export const useAppSettingsStore = create(
     persist(
         (set) => ({
-            isExpanded: false,
+            isExpanded: true,
             setIsExpanded: (newState) => set({ isExpanded: newState }),
 
             locale: 'en',

@@ -4,6 +4,7 @@ import styles from "./Header.module.css";
 import { useEffect, useState } from "react";
 import { i18n } from "@/i18n";
 import { useAppSettingsStore } from "@/store/useAppSettingsStore";
+import { useItemsStore } from "@/store/useItemsStore";
 import FilterPanel from "@/components/FilterPanel/FilterPanel";
 import ControlPanel from "@/components/ControlPanel/ControlPanel";
 import LanguageSelector from "@/components/LanguageSelector/LanguageSelector";
@@ -14,6 +15,7 @@ export default function Header() {
         isExpanded, setIsExpanded,
         locale,
     } = useAppSettingsStore();
+    const { items } = useItemsStore();
     const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
@@ -26,22 +28,28 @@ export default function Header() {
 
     return (
         <header className={styles.header}>
-            <div className={styles.mainPanel}>
+            <div className={`${styles.panel} ${styles.mainPanel}`}>
                 <h1>{i18n[locale]?.title}</h1>
                 <LanguageSelector />
             </div>
-            <div className={`${styles.expandablePanel} ${isExpanded ? styles.open : ''}`}>
-                <div className={styles.panelInner}>
-                    <ControlPanel />
-                    <FilterPanel />
-                </div>
+            <div className={`${styles.panel} ${styles.controlPanel}`}>
+                <ControlPanel />
             </div>
-            <Button
-                icon={"arrow"}
-                label={i18n[locale].toggleControlPanel}
-                className={`${styles.toggleButton} ${isExpanded ? styles.active : ''}`}
-                onClick={() => setIsExpanded(!isExpanded)}
-            />
+            {items.length > 0 &&
+                <>
+                    <div className={`${styles.panel} ${styles.filterPanel} ${isExpanded ? styles.open : ''}`}>
+                        <div className={styles.expandablePanel}>
+                            <FilterPanel />
+                        </div>
+                    </div>
+                    <Button
+                        className={`${styles.toggleButton} ${isExpanded ? styles.active : ''}`}
+                        label={'^'}
+                        ariaLabel={i18n[locale].toggleExpandablePanel}
+                        onClick={() => setIsExpanded(!isExpanded)}
+                    />
+                </>
+            }
         </header>
     );
 }

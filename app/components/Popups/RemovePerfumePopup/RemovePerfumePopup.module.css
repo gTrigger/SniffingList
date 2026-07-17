@@ -1,0 +1,10 @@
+.previewCard {
+    align-self: center;
+    margin-bottom: 24px !important;
+}
+
+.previewActions {
+    display: flex;
+    gap: var(--base-spacing-unit-8x);
+    text-align: center;
+}

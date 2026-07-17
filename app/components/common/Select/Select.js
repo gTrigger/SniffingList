@@ -42,6 +42,7 @@ export default function Select({
 
             {onClear && (
                 <Button
+                    className={styles.cancelButton}
                     icon="cancel"
                     label={i18n[locale].cancelSelection}
                     onClick={onClear}

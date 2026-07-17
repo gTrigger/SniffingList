@@ -120,8 +120,8 @@ export default function ParallaxCard({ item, onDeleteClick, className = '' }) {
                 {onDeleteClick && (
                     <Button
                         className={styles.removeButton}
-                        icon="cancel"
-                        label={i18n[locale].removePerfume}
+                        label={'x'}
+                        ariaLabel={i18n[locale].removePerfume}
                         onClick={(e) => {e.stopPropagation(); setIsRemovePerfumePopupOpen(true)}}
                     />
                 )}

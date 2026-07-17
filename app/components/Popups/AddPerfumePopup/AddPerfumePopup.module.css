@@ -1,0 +1,21 @@
+.addPerfumeForm {
+    display: flex;
+    gap: var(--base-spacing-unit-8x);
+}
+
+.previewCard {
+    align-self: center;
+    margin-bottom: 24px !important;
+}
+
+.previewActions {
+    display: flex;
+    gap: var(--base-spacing-unit-8x);
+    text-align: center;
+}
+
+.loader {
+    max-width: 300px;
+    max-height: 300px;
+    margin: auto;
+}

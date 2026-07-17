@@ -2,9 +2,9 @@ import { NextResponse } from 'next/server';
 import { i18n } from "@/i18n";
 
 export async function POST(request) {
-    try {
-        const { perfumeName, id, locale } = await request.json();
+    const { perfumeName, id, locale } = await request.json();
 
+    try {
         if (!process.env.NEXT_PUBLIC_OPENROUTER_API_KEY) {
             return NextResponse.json({ error: i18n[locale]?.apiKeyMissingError }, { status: 500 });
         }
@@ -28,13 +28,13 @@ export async function POST(request) {
               "name": "Aventus",
               "rating": 0,
               "group": [
-                {"id": "chypre", "ru": "Шипровые", "en": "Chypre"},
-                {"id": "fruity", "ru": "Фруктовые", "en": "Fruity"}
+                {"id": "chypre", "ru": "Шипровые", "en": "Chypre", "de": "Chypre"},
+                {"id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig"}
               ],
               "notes": [
-                {"id": "pineapple", "ru": "Ананас", "en": "Pineapple"},
-                {"id": "birch", "ru": "Береза", "en": "Birch"},
-                {"id": "musk", "ru": "Мускус", "en": "Musk"}
+                {"id": "pineapple", "ru": "Ананас", "en": "Pineapple", "de": "Ananas"},
+                {"id": "birch", "ru": "Береза", "en": "Birch", "de": "Birke"},
+                {"id": "musk", "ru": "Мускус", "en": "Musk", "de": "Moschus"}
               ]
             }
             
@@ -65,12 +65,12 @@ export async function POST(request) {
             return NextResponse.json({ error: `${i18n[locale]?.serverError}: ${data.error?.message}` }, { status: 500 });
         }
 
-        let jsonString = data.choices[0].message.content.trim();
+        const jsonString = data.choices[0].message.content.trim();
 
-        const jsonMatch = jsonString.match(/\{[\s\S]*/);
+        const jsonMatch = jsonString.match(/\{[\s\S]*\}/);
 
         if (!jsonMatch) {
-            return NextResponse.json({ error: i18n[locale]?.jsonWrongFormatError }, { status: 500 });
+            return NextResponse.json({ error: t.jsonWrongFormatError }, { status: 500 });
         }
 
         const parsedData = JSON.parse(jsonMatch[0]);

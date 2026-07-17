@@ -2,10 +2,10 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(4px);
+    backdrop-filter: var(--default-blur-filter);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,8 +38,9 @@
 }
 
 .closeButton {
-     position: absolute;
-     top: var(--base-spacing-unit-8x);
-     right: var(--base-spacing-unit-8x);
-     color: var(--button-color);
+    position: absolute;
+    top: var(--base-spacing-unit-8x);
+    right: var(--base-spacing-unit-8x);
+    font-family: var(--accentFont);
+    font-size: 30px;
  }
