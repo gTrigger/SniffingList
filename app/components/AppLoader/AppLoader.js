@@ -2,124 +2,106 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { i18n } from "@/i18n";
-import { useItemsStore } from '@/store/useItemsStore';
 import { useAppSettingsStore } from "@/store/useAppSettingsStore";
 import styles from './AppLoader.module.css';
 
+const FALLBACK_LOCALE = "en";
 const MIN_LOADING_DELAY_MS = 3000;
-const FIRST_BATCH_SIZE = 12;
+const ASSETS = {
+    images: [
+        "/assets/categories/Amber.png",
+        "/assets/categories/Animalic.png",
+        "/assets/categories/Aquatic.png",
+        "/assets/categories/Citrus.png",
+        "/assets/categories/Earthy.png",
+        "/assets/categories/Floral.png",
+        "/assets/categories/Fruity.png",
+        "/assets/categories/Gourmand.png",
+        "/assets/categories/Green.png",
+        "/assets/categories/Leather.png",
+        "/assets/categories/Mineral.png",
+        "/assets/categories/Musky.png",
+        "/assets/categories/Powdery.png",
+        "/assets/categories/Smoky.png",
+        "/assets/categories/Spicy.png",
+        "/assets/categories/Spicy.png",
+        "/assets/categories/FreshSpicy.png",
+        "/assets/categories/Sweet.png",
+        "/assets/categories/Woody.png",
+        "/assets/categories/Default.png"
+    ],
+    videos: [
+        "/assets/Loading.webm",
+        "/assets/EmptyCollection.webm",
+        "/assets/Thinking.webm",
+    ]
+};
 
-function preloadCardImages(batch) {
-    return new Promise((resolve) => {
-        if (!batch || batch.length === 0) return resolve();
-
-        let loadedCount = 0;
-        const total = batch.length;
-
-        const onImageLoad = () => {
-            loadedCount++;
-            if (loadedCount === total) resolve();
-        };
-
-        batch.forEach((item) => {
-            const url = item.currentImage || item.imageUrl;
-            if (!url) {
-                onImageLoad();
-                return;
-            }
-
+export const ImagePreloader = () => {
+    useEffect(() => {
+        ASSETS.images.forEach((src) => {
             const img = new Image();
-            img.src = url;
-
-            if (img.complete) {
-                onImageLoad();
-            } else {
-                img.addEventListener('load', onImageLoad);
-                img.addEventListener('error', onImageLoad);
-            }
+            img.src = src;
         });
-    });
-}
+    }, []);
+    return null;
+};
+
+export const VideoPreloader = () => (
+    <div className="screenReaderOnly">
+        {ASSETS.videos.map((src) => (
+            <video key={src} src={src} preload="auto" muted playsInline />
+        ))}
+    </div>
+);
 
 export default function AppLoader({ children }) {
     const [isLoaded, setIsLoaded] = useState(false);
     const { locale, setLocale } = useAppSettingsStore();
 
-    const { items, isInitialized } = useItemsStore();
-
-    const loadingTriggered = useRef(false);
-
     useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const params = new URLSearchParams(window.location.search);
-            const urlLang = params.get('lang');
-            if (urlLang && urlLang !== locale) {
-                setLocale(urlLang);
-            }
+        const params = new URLSearchParams(window.location.search);
+        const urlLang = params.get('lang');
+
+        if (urlLang && urlLang !== locale) {
+            setLocale(urlLang);
         }
     }, []);
 
     useEffect(() => {
-        const currentLang = locale || 'ru';
-        document.documentElement.setAttribute('lang', currentLang);
+        document.documentElement.setAttribute('lang', locale || FALLBACK_LOCALE);
     }, [locale]);
 
     useEffect(() => {
-        if (loadingTriggered.current) return;
+        const timer = setTimeout(() => {
+            setIsLoaded(true);
+        }, MIN_LOADING_DELAY_MS);
 
-        let isMounted = true;
-        let timeoutId;
+        return () => clearTimeout(timer);
+    }, []);
 
-        async function waitForAssets() {
-            try {
-                const minimumDelay = new Promise(resolve => {
-                    timeoutId = setTimeout(resolve, MIN_LOADING_DELAY_MS);
-                });
-
-                if ('fonts' in document) {
-                    await document.fonts.ready;
-                }
-
-                const firstBatch = items ? items.slice(0, FIRST_BATCH_SIZE) : [];
-                const imagesPromise = preloadCardImages(firstBatch);
-
-                await Promise.all([imagesPromise, minimumDelay]);
-            } catch (err) {
-                console.error(i18n[locale]?.genericError);
-            } finally {
-                if (isMounted) {
-                    setIsLoaded(true);
-                }
-            }
+    useEffect(() => {
+        if ('fonts' in document) {
+            document.fonts.ready.catch(() => {});
         }
-
-        const isReadyToLoad = isInitialized !== undefined ? isInitialized : (items && items.length > 0);
-
-        if (isReadyToLoad) {
-            loadingTriggered.current = true;
-            waitForAssets();
-        }
-
-        return () => {
-            isMounted = false;
-            if (timeoutId) clearTimeout(timeoutId);
-        };
-    }, [items, isInitialized]);
+    }, []);
 
     if (!isLoaded) {
         return (
             <div className={styles.loaderContainer}>
+                <ImagePreloader />
+                <VideoPreloader />
+
                 <video
                     src="/assets/Loading.webm"
                     muted
                     autoPlay
                     loop
                     playsInline
-                    aria-label={i18n[locale]?.loading}
                 >
                     {i18n[locale]?.loading}
                 </video>
-                <p className={styles.loaderText}>
+                <p>
                     {i18n[locale]?.loading}
                     <span className={styles.dots}/>
                 </p>
