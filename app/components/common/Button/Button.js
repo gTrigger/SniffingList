@@ -2,26 +2,32 @@
 
 import styles from "./Button.module.css";
 import CancelIcon from "@/components/common/icons/CancelIcon";
-import ArrowIcon from "@/components/common/icons/ArrowIcon";
-import LinkIcon from "@/components/common/icons/LinkIcon";
 
 const iconLibrary = {
     cancel: <CancelIcon aria-hidden="true" />,
-    arrow: <ArrowIcon aria-hidden="true" />,
-    link: <LinkIcon aria-hidden="true" />,
 };
 
-export default function Button({ label, ariaLabel, icon, onClick, className = '', isDisabled = false, isHidden = false }) {
+export default function Button({
+    icon,
+    label,
+    ariaLabel,
+    onClick,
+    isDisabled = false,
+    isHidden = false,
+    className = "",
+}) {
     const iconToRender = icon ? iconLibrary[icon] : null;
+
+    if (isHidden) return null;
 
     return (
         <button
             type="button"
-            className={`${className} ${styles.button} ${isHidden ? styles.hidden : ''}`}
+            className={`${styles.button} ${className}`.trim()}
             disabled={isDisabled}
             onClick={onClick}
-            title={icon ? label : undefined}
-            aria-label={ariaLabel ? ariaLabel : label}
+            title={label}
+            aria-label={ariaLabel || label}
         >
             {icon ? iconToRender : label}
         </button>

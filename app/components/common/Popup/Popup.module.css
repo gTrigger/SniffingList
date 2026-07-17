@@ -32,6 +32,20 @@
     gap: var(--base-spacing-unit-4x);
 }
 
+.modalTitle {
+    font-weight: normal;
+    font-size: var(--primary-font-size);
+    font-family: var(--primary-font), sans-serif;
+    color: rgba(var(--primary-font-color), var(--primary-opacity));
+    margin: 0;
+}
+
+.modalSubtitle {
+    font-size: var(--secondary-font-size);
+    font-family: var(--primary-font), sans-serif;
+    color: rgba(var(--primary-font-color), var(--secondary-opacity));
+}
+
 .modalFooter {
     display: flex;
     justify-content: space-between;
@@ -41,6 +55,6 @@
     position: absolute;
     top: var(--base-spacing-unit-8x);
     right: var(--base-spacing-unit-8x);
-    font-family: var(--accentFont);
+    font-family: var(--accent-font);
     font-size: 30px;
  }

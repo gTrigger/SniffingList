@@ -16,7 +16,7 @@
     will-change: backdrop-filter;
     backdrop-filter: var(--default-blur-filter);
     color: var(--button-color);
-    font-size: var(--secondaryFontSize);
+    font-size: var(--secondary-font-size);
     display: flex;
     justify-content: space-between;
     gap: var(--base-spacing-unit-8x);
@@ -24,18 +24,8 @@
     align-self: flex-end;
 }
 
-.toast span {
-    font-family: var(--accentFont);
-    font-size: 30px;
-    display: inline-block;
-    transform: translateY(4px);
-}
-
-.error svg { color: #770202; }
-.success svg { color: #005419; }
-
 .toast .closeButton {
-    font-family: var(--accentFont);
+    font-family: var(--accent-font);
     font-size: 30px;
 }
 

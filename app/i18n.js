@@ -9,6 +9,7 @@ export const i18n = {
         of: "из",
         or: "или",
         loading: "Загрузка",
+        thinking: "Думаем",
         scrollToTop: "Вернуться вверх",
         cancel: "Отменить",
         cancelSelection: "Очистить выбор",
@@ -39,7 +40,7 @@ export const i18n = {
         removePerfume: "Удалить парфюм",
         removePerfumeTitle: "Удалить парфюм",
         removePerfumeSubtitle: "Вы уверены? Это действие удалит парфюм из вашей коллекции.",
-        cancelRemovePerfume: "Нет-нет",
+        cancelRemovePerfume: "Не-а",
         confirmRemovePerfume: "Да, удаляем",
 
         // add perfume
@@ -60,14 +61,14 @@ export const i18n = {
         loadCollectionSubtitle: "Вы уверены? Это действие перезапишет всю вашу коллекцию (если она есть) безвозвратно и загрузит выбранную коллекцию.",
         importFromJson: "Импорт из JSON",
         loadDefaultCollection: "Загрузить тест-коллекцию",
-        cancelLoadCollection: "Нет-нет",
+        cancelLoadCollection: "Не-а",
         confirmLoadCollection: "Да, перезаписываем",
 
         // clear collection
         removeAll: "Очистить коллекцию",
         clearCollectionTitle: "Очистить коллекцию",
         clearCollectionSubtitle: "Вы уверены? Это действие удалит всю-всю вашу коллекцию безвозвратно.",
-        cancelClearCollection: "Нет-нет",
+        cancelClearCollection: "Не-а",
         confirmClearCollection: "Да, удаляем",
 
         // notification
@@ -94,6 +95,7 @@ export const i18n = {
         of: "of",
         or: "or",
         loading: "Loading",
+        thinking: "Thinking",
         scrollToTop: "Scroll To Top",
         cancel: "Cancel",
         cancelSelection: "Cancel selection",
@@ -179,7 +181,8 @@ export const i18n = {
         found: "Gefundene Parfums",
         of: "von",
         or: "oder",
-        loading: "Laden",
+        loading: "Wird geladen",
+        thinking: "Denkt nach",
         scrollToTop: "Nach oben",
         cancel: "Abbrechen",
         cancelSelection: "Auswahl aufheben",

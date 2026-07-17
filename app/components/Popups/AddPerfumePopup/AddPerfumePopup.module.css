@@ -3,9 +3,10 @@
     gap: var(--base-spacing-unit-8x);
 }
 
-.previewCard {
+.addPerfumePopup .previewCard {
     align-self: center;
-    margin-bottom: 24px !important;
+    margin-bottom: var(--base-spacing-unit-12x);
+    font-family: var(--primary-font);
 }
 
 .previewActions {
@@ -14,8 +15,9 @@
     text-align: center;
 }
 
-.loader {
+.addPerfumePopup video {
     max-width: 300px;
     max-height: 300px;
     margin: auto;
+    margin-top: var(--base-spacing-unit-8x);
 }

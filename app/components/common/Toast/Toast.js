@@ -3,9 +3,9 @@
 import styles from './Toast.module.css';
 import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-import {i18n} from "@/i18n";
-import {useAppSettingsStore} from "@/store/useAppSettingsStore";
-import {useToastStore} from '@/store/useToastStore';
+import { i18n } from "@/i18n";
+import { useAppSettingsStore } from "@/store/useAppSettingsStore";
+import { useToastStore } from '@/store/useToastStore';
 import Button from "@/components/common/Button/Button";
 
 export default function Toast() {
@@ -14,25 +14,26 @@ export default function Toast() {
     const [portalElement, setPortalElement] = useState(null);
 
     useEffect(() => {
-        const element = document.getElementById('toast-portal');
-
-        if (element) {
-            setPortalElement(element);
-        }
+        setPortalElement(document.getElementById('toastPortal'));
     }, []);
 
-    if (!portalElement || !toasts || toasts.length === 0) {
-        return null;
-    }
+    if (!portalElement || toasts.length === 0) return null;
 
     return createPortal(
-        <div className={styles.container}>
+        <div
+            className={styles.container}
+            role="status"
+            aria-live="polite"
+        >
             {toasts.map((toast) => (
-                <div key={toast.id} className={`${styles.toast} ${styles[toast.type]} subtitle`}>
-                    {toast.message}
+                <div
+                    key={toast.id}
+                    className={`${styles.toast} ${styles[toast.type]} subtitle`}
+                >
+                    <span>{toast.message}</span>
                     <Button
                         className={styles.closeButton}
-                        label={'x'}
+                        label="x"
                         ariaLabel={i18n[locale].removeNotification}
                         onClick={() => removeToast(toast.id)}
                     />

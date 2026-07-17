@@ -26,7 +26,7 @@
 }
 
 .mainPanel h1 {
-    font-family: var(--accentFont);
+    font-family: var(--accent-font);
     font-size: 90px;
     margin: 0;
 }
@@ -72,7 +72,7 @@
     color: rgba(0, 0, 0, 0.5);
     align-self: center;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    font-family: var(--accentFont);
+    font-family: var(--accent-font);
     font-size: 50px;
     transform: rotate(170deg);
     padding-top: 40px;

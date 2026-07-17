@@ -2,19 +2,31 @@
 
 import styles from "./Input.module.css";
 
-export default function Input({ value, id, label, placeholder, isDisabled, onChange }) {
+export default function Input({
+    value,
+    id,
+    label,
+    ariaLabel,
+    placeholder,
+    isDisabled = false,
+    onChange
+}) {
     return (
         <div className={styles.inputWrapper}>
-            {label && <label htmlFor={id} className={styles.label}>{ label }</label>}
+            {label && (
+                <label htmlFor={id} className={styles.label}>
+                    {label}
+                </label>
+            )}
             <input
                 id={id}
                 className={styles.input}
                 type="text"
-                value={value}
+                value={value ?? ""}
                 placeholder={placeholder}
                 disabled={isDisabled}
                 onChange={onChange}
-                aria-label={label ? label : placeholder}
+                aria-label={ariaLabel || label}
             />
         </div>
     );

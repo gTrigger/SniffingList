@@ -4,9 +4,9 @@ import styles from "./ParallaxCard.module.css";
 import { useRef, useEffect, useState } from "react";
 import { i18n } from "@/i18n";
 import { useAppSettingsStore } from "@/store/useAppSettingsStore";
-import TagList from "@/components/TagList/TagList";
+import TagList from "./TagList/TagList";
 import Button from "@/components/common/Button/Button";
-import Popup from "@/components/common/Popup/Popup";
+import RemovePerfumePopup from "@/components/Popups/RemovePerfumePopup/RemovePerfumePopup";
 
 export default function ParallaxCard({ item, onDeleteClick, className = '' }) {
     const { locale } = useAppSettingsStore();
@@ -21,26 +21,26 @@ export default function ParallaxCard({ item, onDeleteClick, className = '' }) {
     const rafRef = useRef(null);
 
     const categoryImages = {
-        "Amber": "/assets/Amber.png",
-        "Animalic": "/assets/Animalic.png",
-        "Aquatic": "/assets/Aquatic.png",
-        "Citrus": "/assets/Citrus.png",
-        "Earthy": "/assets/Earthy.png",
-        "Floral": "/assets/Floral.png",
-        "Fruity": "/assets/Fruity.png",
-        "Gourmand": "/assets/Gourmand.png",
-        "Green": "/assets/Green.png",
-        "Leather": "/assets/Leather.png",
-        "Mineral": "/assets/Mineral.png",
-        "Musky": "/assets/Musky.png",
-        "Powdery": "/assets/Powdery.png",
-        "Smoky": "/assets/Smoky.png",
-        "Spicy": "/assets/Spicy.png",
-        "Warm Spicy": "/assets/Spicy.png",
-        "Fresh Spicy": "/assets/FreshSpicy.png",
-        "Sweet": "/assets/Sweet.png",
-        "Woody": "/assets/Woody.png",
-        "Default": "/assets/Default.png"
+        "Amber": "/assets/categories/Amber.png",
+        "Animalic": "/assets/categories/Animalic.png",
+        "Aquatic": "/assets/categories/Aquatic.png",
+        "Citrus": "/assets/categories/Citrus.png",
+        "Earthy": "/assets/categories/Earthy.png",
+        "Floral": "/assets/categories/Floral.png",
+        "Fruity": "/assets/categories/Fruity.png",
+        "Gourmand": "/assets/categories/Gourmand.png",
+        "Green": "/assets/categories/Green.png",
+        "Leather": "/assets/categories/Leather.png",
+        "Mineral": "/assets/categories/Mineral.png",
+        "Musky": "/assets/categories/Musky.png",
+        "Powdery": "/assets/categories/Powdery.png",
+        "Smoky": "/assets/categories/Smoky.png",
+        "Spicy": "/assets/categories/Spicy.png",
+        "Warm Spicy": "/assets/categories/Spicy.png",
+        "Fresh Spicy": "/assets/categories/FreshSpicy.png",
+        "Sweet": "/assets/categories/Sweet.png",
+        "Woody": "/assets/categories/Woody.png",
+        "Default": "/assets/categories/Default.png"
     };
 
     const descriptionId = `desc-${item.id}`;
@@ -107,7 +107,7 @@ export default function ParallaxCard({ item, onDeleteClick, className = '' }) {
     return (
         <>
             <div
-                className={`${styles.cardWrap} ${className || ''}`}
+                className={`${styles.cardWrap} ${className}`.trim()}
                 ref={wrapRef}
                 onMouseMove={handleMouseMove}
                 onMouseEnter={handleMouseEnter}
@@ -121,7 +121,7 @@ export default function ParallaxCard({ item, onDeleteClick, className = '' }) {
                     <Button
                         className={styles.removeButton}
                         label={'x'}
-                        ariaLabel={i18n[locale].removePerfume}
+                        ariaLabel={i18n[locale]?.removePerfume}
                         onClick={(e) => {e.stopPropagation(); setIsRemovePerfumePopupOpen(true)}}
                     />
                 )}
@@ -152,32 +152,17 @@ export default function ParallaxCard({ item, onDeleteClick, className = '' }) {
                     </div>
 
                     <div id={descriptionId} className="screenReaderOnly">
-                        {
-                            `${item.brand} ${item.name}.
-                             ${i18n[locale]?.groups}: ${item.group.map(g => g[locale]).join(', ')}. 
-                             ${i18n[locale]?.notes}: ${item.notes.map(n => n[locale]).join(', ')}`
-                        }
+                        {item && `${item.brand || ""} ${item.name || ""}. 
+                        ${i18n[locale]?.groups || ""}: ${item.group?.map(g => g[locale] || "").join(', ') || ""}. 
+                        ${i18n[locale]?.notes || ""}: ${item.notes?.map(n => n[locale] || "").join(', ') || ""}`}
                     </div>
                 </div>
             </div>
 
-            <Popup
-                title={i18n[locale]?.removePerfumeTitle}
-                subtitle={i18n[locale]?.removePerfumeSubtitle}
-                footer={
-                    <>
-                        <Button
-                            label={i18n[locale]?.cancelRemovePerfume}
-                            onClick={() => setIsRemovePerfumePopupOpen(false)}
-                        />
-                        <Button
-                            label={i18n[locale]?.confirmRemovePerfume}
-                            onClick={() => onDeleteClick(item.id)}
-                        />
-                    </>
-                }
+            <RemovePerfumePopup
                 isOpen={isRemovePerfumePopupOpen}
                 onClose={() => setIsRemovePerfumePopupOpen(false)}
+                onConfirm={() => onDeleteClick(item.id)}
             />
         </>
     );

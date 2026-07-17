@@ -9,7 +9,7 @@ export default function Select({
     value,
     id,
     label,
-    options,
+    options = [],
     placeholder,
     isSmall,
     onChange,
@@ -20,17 +20,17 @@ export default function Select({
     const { locale } = useAppSettingsStore();
 
     return (
-        <div className={`${styles.selectWrapper} ${isSmall ? styles.small : ''}`}>
-            {label && <label htmlFor={id} className={styles.label}>{ label }</label>}
+        <div className={`${styles.selectWrapper} ${isSmall ? styles.small : ""}`.trim()}>
+            {label && <label htmlFor={id} className={styles.label}>{label}</label>}
+
             <select
                 id={id}
-                className={styles.select}
                 onChange={(e) => {
                     onChange(e.target.value);
                     e.target.blur();
                 }}
                 value={value}
-                aria-label={label ? label : placeholder}
+                aria-label={label || placeholder}
             >
                 {placeholder && <option value="" disabled>{placeholder}</option>}
                 {options.map((opt) => (
@@ -42,7 +42,6 @@ export default function Select({
 
             {onClear && (
                 <Button
-                    className={styles.cancelButton}
                     icon="cancel"
                     label={i18n[locale].cancelSelection}
                     onClick={onClear}

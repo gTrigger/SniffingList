@@ -15,7 +15,8 @@
     background: transparent;
     padding: var(--base-spacing-unit-4x) var(--base-spacing-unit-8x);
     padding-left: 0;
-    font-size: var(--subtitle-font-size);
+    font-size: var(--secondary-font-size);
+    font-family: var(--primary-font);
     text-indent: -2px;
     cursor: pointer;
     border-color: transparent;

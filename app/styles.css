@@ -1,23 +1,3 @@
-@font-face {
-    font-family: 'Montserrat';
-
-    src: url('../public/fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
-
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rhythmic';
-
-    src: url('../public/fonts/Rhythmic/RhythmicSVG.otf') format('opentype');
-
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
 body {
     display: flex;
     flex-direction: column;
@@ -31,32 +11,24 @@ main {
 }
 
 :root {
-    --primaryFont: Montserrat, sans-serif;
-    --secondaryFont: Arial, sans-serif;
-    --accentFont: Rhythmic, sans-serif;
+    --secondary-font: Arial, sans-serif;
 
-    --primaryFontColor: 0, 0, 0;
-    --secondaryFontColor: 255, 255, 255;
+    --primary-font-color: 0, 0, 0;
+    --secondary-font-color: 255, 255, 255;
 
-    --primaryFontSize: 1.4rem;
-    --secondaryFontSize: 1.2rem;
-    --tertiaryFontSize: .9rem;
-    --quaternaryFontSize: .8rem;
+    --primary-font-size: 1.4rem;
+    --secondary-font-size: 1.2rem;
+    --tertiary-font-size: 1rem;
+    --quaternary-font-size: .8rem;
 
-    --primaryOpacity: 1;
-    --secondaryOpacity: .75;
-    --tertiaryOpacity: .5;
+    --primary-opacity: 1;
+    --secondary-opacity: .75;
+    --tertiary-opacity: .5;
 
-    --title-font-size: var(--primaryFontSize);
-    --title-font: var(--primaryFont);
-
-    --subtitle-font-size: var(--secondaryFontSize);
-    --subtitle-font: var(--primaryFont);
-
-    --button-font-size: var(--secondaryFontSize);
-    --button-color: rgba(var(--primaryFontColor), var(--secondaryOpacity));
-    --button-color-hover: rgba(var(--primaryFontColor), var(--primaryOpacity));
-    --button-font: var(--secondaryFont);
+    --button-font-size: var(--secondary-font-size);
+    --button-color: rgba(var(--primary-font-color), var(--secondary-opacity));
+    --button-color-hover: rgba(var(--primary-font-color), var(--primary-opacity));
+    --button-font: var(--secondary-font);
 
     --base-spacing-unit: 2px;
     --base-spacing-unit-2x: 4px;
@@ -78,28 +50,17 @@ main {
     --icon-button-height: 30px;
 }
 
-.cardTitle {
-    font-size: var(--title-font-size);
-    font-family: var(--title-font), sans-serif;
+.title {
+    font-size: var(--primary-font-size);
+    font-family: var(--primary-font), sans-serif;
+    color: rgba(var(--primary-font-color), var(--primary-opacity));
 }
 
-.cardSubtitle {
-    font-size: var(--subtitle-font-size);
-    font-family: var(--subtitle-font), sans-serif;
+.subtitle {
+    font-size: var(--secondary-font-size);
+    font-family: var(--primary-font), sans-serif;
+    color: rgba(var(--primary-font-color), var(--secondary-opacity));
 }
-
-.title, .modalTitle {
-    font-size: var(--title-font-size);
-    font-family: var(--title-font), sans-serif;
-    color: rgba(var(--primaryFontColor), var(--primaryOpacity));
-}
-
-.subtitle, .modalSubtitle {
-    font-size: var(--subtitle-font-size);
-    font-family: var(--subtitle-font), sans-serif;
-    color: rgba(var(--primaryFontColor), var(--secondaryOpacity));
-}
-
 
 .screenReaderOnly {
     position: absolute;
@@ -112,7 +73,7 @@ main {
     border: 0;
 }
 
-#toast-portal {
-     position: fixed;
-     z-index: 9999;
+#toastPortal {
+    position: fixed;
+    z-index: 9999;
 }

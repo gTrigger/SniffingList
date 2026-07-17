@@ -44,14 +44,15 @@ function HomeContent() {
     useEffect(() => {
         const params = new URLSearchParams(searchParams);
 
+        if (locale) params.set('lang', locale); else params.delete('lang');
+
         if (searchQuery) params.set('q', searchQuery); else params.delete('q');
-        if (sortOrder) params.set('sort', sortOrder); else params.delete('sort');
         if (filterBrand) params.set('brand', filterBrand); else params.delete('brand');
         if (filterGroup) params.set('group', filterGroup); else params.delete('group');
         if (filterNote) params.set('note', filterNote); else params.delete('note');
 
         router.replace(`${pathname}?${params.toString()}`);
-    }, [searchQuery, sortOrder, filterBrand, filterGroup, filterNote, router, pathname]);
+    }, [locale, searchQuery, filterBrand, filterGroup, filterNote, router, pathname]);
 
     useEffect(() => {
         setIsMounted(true);
@@ -102,7 +103,16 @@ function HomeContent() {
         <div className={styles.container}>
             {items.length === 0 && (
                 <div className={styles.emptyCollection}>
-                    <img src={'/assets/EmptyCollection.gif'} alt={i18n[locale]?.emptyCollection}/>
+                    <video
+                        src="/assets/EmptyCollection.webm"
+                        muted
+                        autoPlay
+                        loop
+                        playsInline
+                        aria-label={i18n[locale]?.emptyCollection}
+                    >
+                        {i18n[locale]?.emptyCollection}
+                    </video>
 
                     <div className="title">{i18n[locale]?.emptyCollectionTitle} 👁👄👁</div>
                     <p className="subtitle">

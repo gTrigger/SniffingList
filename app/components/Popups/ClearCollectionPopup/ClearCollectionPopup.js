@@ -1,6 +1,5 @@
 "use client";
 
-import styles from "./ClearCollectionPopup.module.css";
 import { i18n } from "@/i18n";
 import { useAppSettingsStore } from "@/store/useAppSettingsStore";
 import { useItemsStore } from "@/store/useItemsStore";

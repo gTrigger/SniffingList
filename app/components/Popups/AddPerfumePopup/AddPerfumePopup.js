@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./AddPerfumePopup.module.css";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { i18n } from "@/i18n";
 import { useAppSettingsStore } from "@/store/useAppSettingsStore";
 import { useItemsStore } from "@/store/useItemsStore";
@@ -29,8 +29,11 @@ export default function AddPerfumePopup({ isOpen, onClose }) {
         try {
             const response = await fetch('/api/generate-perfume', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ perfumeName: perfumeQuery, id: items.length, locale: locale }),
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept-Language': locale
+                },
+                body: JSON.stringify({ perfumeName: perfumeQuery, id: items.length }),
             });
 
             const newData = await response.json();
@@ -75,6 +78,7 @@ export default function AddPerfumePopup({ isOpen, onClose }) {
 
     return (
         <Popup
+            className={styles.addPerfumePopup}
             title={i18n[locale]?.findPerfumeTitle}
             subtitle={i18n[locale]?.findPerfumeSubtitle}
             footer={previewItem && <>
@@ -106,7 +110,16 @@ export default function AddPerfumePopup({ isOpen, onClose }) {
             </div>
 
             {isLoading && (
-                <img className={styles.loader} src={'/assets/Loading.gif'} alt={i18n[locale]?.loading}/>
+                <video
+                    src="/assets/Thinking.webm"
+                    muted
+                    autoPlay
+                    loop
+                    playsInline
+                    aria-label={i18n[locale]?.thinking}
+                >
+                    {i18n[locale]?.thinking}
+                </video>
             )}
 
             {previewItem && (

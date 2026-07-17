@@ -16,7 +16,7 @@ export default function Footer() {
     }, []);
 
     if (!isMounted) {
-        return <footer className={styles.footer}></footer>;
+        return <footer className={styles.footer} />;
     }
 
     return (

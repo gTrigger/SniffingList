@@ -1,11 +1,20 @@
+export const dynamic = 'force-dynamic';
+
 import { NextResponse } from 'next/server';
 import { i18n } from "@/i18n";
 
+const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
+const DEFAULT_MODEL = "openrouter/auto";
+const FALLBACK_LOCALE = "en";
+
 export async function POST(request) {
-    const { perfumeName, id, locale } = await request.json();
+    const locale = request.headers.get('accept-language') || FALLBACK_LOCALE;
+    const API_KEY = process.env.OPENROUTER_API_KEY;
 
     try {
-        if (!process.env.NEXT_PUBLIC_OPENROUTER_API_KEY) {
+        const { perfumeName, id } = await request.json();
+
+        if (!API_KEY) {
             return NextResponse.json({ error: i18n[locale]?.apiKeyMissingError }, { status: 500 });
         }
 
@@ -21,9 +30,7 @@ export async function POST(request) {
             4. "notes" must perfectly reflect Fragrantica. For notes use not more than 6 first entries, capitalized. 
             
             EXAMPLE OF EXPECTED OUTPUT:
-            User: Creed Aventus
             {
-              "id": 99432,
               "brand": "Creed",
               "name": "Aventus",
               "rating": 0,
@@ -36,25 +43,25 @@ export async function POST(request) {
                 {"id": "birch", "ru": "Береза", "en": "Birch", "de": "Birke"},
                 {"id": "musk", "ru": "Мускус", "en": "Musk", "de": "Moschus"}
               ]
-            }
-            
-            Now, do exactly this for the query. Return ONLY valid JSON.`;
+            }`;
 
-        const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+        const siteOrigin = request.headers.get('origin') || "http://localhost:3000";
+
+        const response = await fetch(OPENROUTER_URL, {
             method: "POST",
             headers: {
-                "Authorization": `Bearer ${process.env.NEXT_PUBLIC_OPENROUTER_API_KEY}`,
+                "Authorization": `Bearer ${API_KEY}`,
                 "Content-Type": "application/json",
-                "HTTP-Referer": "http://localhost:3000",
+                "HTTP-Referer": siteOrigin,
                 "X-Title": "My Perfume App"
             },
             body: JSON.stringify({
-                model: "openrouter/auto",
+                model: DEFAULT_MODEL,
                 temperature: 0,
                 top_p: 0.1,
                 messages: [
                     { role: "system", content: systemPrompt },
-                    { role: "user", content: `Find the perfume data: ${perfumeName}, id: ${id}` }
+                    { role: "user", content: `Find the perfume data: ${perfumeName}` }
                 ]
             })
         });
@@ -62,20 +69,28 @@ export async function POST(request) {
         const data = await response.json();
 
         if (!response.ok || data.error) {
-            return NextResponse.json({ error: `${i18n[locale]?.serverError}: ${data.error?.message}` }, { status: 500 });
+            const apiError = data.error?.message || "Unknown OpenRouter Error";
+            return NextResponse.json({ error: `${i18n[locale]?.serverError}: ${apiError}` }, { status: response.status });
         }
 
-        const jsonString = data.choices[0].message.content.trim();
+        const rawContent = data.choices?.[0]?.message?.content?.trim();
 
-        const jsonMatch = jsonString.match(/\{[\s\S]*\}/);
-
-        if (!jsonMatch) {
-            return NextResponse.json({ error: t.jsonWrongFormatError }, { status: 500 });
+        if (!rawContent) {
+            return NextResponse.json({ error: i18n[locale]?.jsonWrongFormatError }, { status: 500 });
         }
 
-        const parsedData = JSON.parse(jsonMatch[0]);
+        const cleanJsonString = rawContent.replace(/^```json\s*/i, '').replace(/```$/, '').trim();
 
-        return NextResponse.json(parsedData);
+        try {
+            const parsedData = JSON.parse(cleanJsonString);
+
+            parsedData.id = id;
+
+            return NextResponse.json(parsedData);
+        } catch (parseError) {
+            return NextResponse.json({ error: i18n[locale]?.jsonWrongFormatError }, { status: 500 });
+        }
+
     } catch (error) {
         return NextResponse.json({ error: `${i18n[locale]?.getPerfumeDataError}: ${error.message}` }, { status: 500 });
     }
