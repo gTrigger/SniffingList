@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
+    background: var(--secondary-blur-background);
     backdrop-filter: var(--default-blur-filter);
     display: flex;
     justify-content: center;

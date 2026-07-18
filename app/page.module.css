@@ -1,19 +1,18 @@
 .container {
     max-width: 1200px;
-    padding: var(--base-spacing-unit-16x);
-    padding-top: 0;
+    padding: 150px var(--base-spacing-unit-16x) 50px;
     margin: 0 auto;
     font-family: 'Inter', sans-serif;
     display: flex;
     flex-direction: column;
+    gap: var(--base-spacing-unit-8x);
 }
 
 .grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: var(--base-spacing-unit-12x);
     justify-content: center;
-    margin-top: 30px;
 }
 
 .stats {
@@ -43,4 +42,10 @@
 .emptyCollection .linkButton {
     text-transform: lowercase;
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 130px var(--base-spacing-unit-16x) 50px;
+    }
 }

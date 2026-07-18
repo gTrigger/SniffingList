@@ -12,8 +12,8 @@
     transition: all 0.3s ease;
     text-align: center;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
     will-change: backdrop-filter;
+    background: var(--primary-blur-background);
     backdrop-filter: var(--default-blur-filter);
     font-family: var(--accent-font);
     font-size: 50px;

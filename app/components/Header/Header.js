@@ -26,34 +26,30 @@ export default function Header() {
     }
 
     return (
-        <header className={styles.header}>
-            <div className={`${styles.panel} ${styles.mainPanel}`}>
+        <header className={`${styles.header} ${isExpanded ? styles.open : ''}`.trim()}>
+            <div className={styles.mainPanel}>
                 <h1>{i18n[locale]?.title}</h1>
                 <LanguageSelector />
             </div>
 
-            <div className={`${styles.panel} ${styles.controlPanel}`}>
-                <ControlPanel />
-            </div>
+            <section
+                className={styles.secondaryPanel}
+                aria-hidden={!isExpanded}
+            >
+                <div className={styles.expandablePanel}>
+                    <ControlPanel />
+                    {hasItems && (
+                        <FilterPanel />
+                    )}
+                </div>
+            </section>
 
-            {hasItems && (
-                <>
-                    <section
-                        className={`${styles.panel} ${styles.filterPanel} ${isExpanded ? styles.open : ''}`.trim()}
-                        aria-hidden={!isExpanded}
-                    >
-                        <div className={styles.expandablePanel}>
-                            <FilterPanel />
-                        </div>
-                    </section>
-                    <Button
-                        className={`${styles.toggleButton} ${isExpanded ? styles.active : ''}`.trim()}
-                        label="^"
-                        ariaLabel={i18n[locale]?.toggleExpandablePanel}
-                        onClick={() => setIsExpanded(!isExpanded)}
-                    />
-                </>
-            )}
+            <Button
+                className={`${styles.toggleButton} ${isExpanded ? styles.active : ''}`.trim()}
+                label="^"
+                ariaLabel={i18n[locale]?.toggleExpandablePanel}
+                onClick={() => setIsExpanded(!isExpanded)}
+            />
         </header>
     );
 }

@@ -81,6 +81,7 @@ export const i18n = {
         getPerfumeDataError: "Ошибка: что-то пошло не так при запросе данных у ИИ",
         clearCollectionSuccess: "Успех: коллекция была очищена",
         addPerfumeSuccess: "Успех: новый парфюм был добавлен",
+        removePerfumeSuccess: "Успех: парфюм был удален из коллекции",
         importFromJsonSuccess: "Успех: импортировано из JSON",
         loadFromDefaultSuccess: "Успех: загружена тестовая коллекция",
         removeNotification: "Закрыть уведомление"
@@ -168,6 +169,7 @@ export const i18n = {
         getPerfumeDataError: "Error: something went wrong while retrieving data from AI",
         clearCollectionSuccess: "Success: collection was cleared",
         addPerfumeSuccess: "Success: new perfume was added",
+        removePerfumeSuccess: "Success: the perfume has been removed from the collection",
         importFromJsonSuccess: "Success: JSON collection imported",
         loadFromDefaultSuccess: "Success: default collection loaded",
         removeNotification: "Close notification"
@@ -254,6 +256,7 @@ export const i18n = {
         getPerfumeDataError: "Fehler: Fehler bei der Datenabfrage von der KI",
         clearCollectionSuccess: "Erfolg: Sammlung wurde geleert",
         addPerfumeSuccess: "Erfolg: Neues Parfum wurde hinzugefügt",
+        removePerfumeSuccess: "Erfolg: Das Parfüm wurde aus der Sammlung entfernt",
         importFromJsonSuccess: "Erfolg: Aus JSON importiert",
         loadFromDefaultSuccess: "Erfolg: Test-Sammlung wurde geladen",
         removeNotification: "Benachrichtigung schließen"

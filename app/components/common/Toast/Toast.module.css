@@ -12,8 +12,8 @@
     padding: var(--base-spacing-unit-4x);
     border-radius: var(--default-border-radius);
     animation: slideIn 0.3s ease;
-    background: rgba(255, 255, 255, 0.5);
     will-change: backdrop-filter;
+    background: var(--primary-blur-background);
     backdrop-filter: var(--default-blur-filter);
     color: var(--button-color);
     font-size: var(--secondary-font-size);

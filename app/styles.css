@@ -39,6 +39,8 @@ main {
 
     --default-border-radius: var(--base-spacing-unit-4x);
     --default-blur-filter: blur(10px);
+    --primary-blur-background: rgba(255, 255, 255, 0.5);
+    --secondary-blur-background: rgba(0, 0, 0, 0.5);
 
     --card-width: 250px;
     --card-height: 300px;
