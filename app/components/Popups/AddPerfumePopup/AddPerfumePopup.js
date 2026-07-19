@@ -12,7 +12,7 @@ import Button from "@/components/common/Button/Button";
 import Input from "@/components/common/Input/Input";
 
 export default function AddPerfumePopup({ isOpen, onClose }) {
-    const { locale } = useAppSettingsStore();
+    const { locale, setIsExpanded } = useAppSettingsStore();
     const { addToast } = useToastStore();
     const { items, addItem } = useItemsStore();
 
@@ -66,6 +66,7 @@ export default function AddPerfumePopup({ isOpen, onClose }) {
     const confirmAddPerfume = () => {
         addItem(previewItem);
         closeAddPerfumePopup();
+        setIsExpanded(false);
 
         return addToast(i18n[locale]?.addPerfumeSuccess, "success");
     };

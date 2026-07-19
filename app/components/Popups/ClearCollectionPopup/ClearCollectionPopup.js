@@ -8,13 +8,14 @@ import Popup from "@/components/common/Popup/Popup";
 import Button from "@/components/common/Button/Button";
 
 export default function ClearCollectionPopup({ isOpen, onClose }) {
-    const { locale } = useAppSettingsStore();
+    const { locale, setIsExpanded } = useAppSettingsStore();
     const { addToast } = useToastStore();
     const { removeAll } = useItemsStore();
 
     const confirmClearCollection = () => {
         removeAll();
         onClose();
+        setIsExpanded(false);
 
         return addToast(i18n[locale]?.clearCollectionSuccess, "success");
     };

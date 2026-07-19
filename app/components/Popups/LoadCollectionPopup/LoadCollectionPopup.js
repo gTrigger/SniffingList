@@ -10,7 +10,7 @@ import Popup from "@/components/common/Popup/Popup";
 import Button from "@/components/common/Button/Button";
 
 export default function LoadCollectionPopup({ isOpen, onClose }) {
-    const { locale } = useAppSettingsStore();
+    const { locale, setIsExpanded } = useAppSettingsStore();
     const { addToast } = useToastStore();
     const { loadDefault, setItems } = useItemsStore();
 
@@ -19,6 +19,7 @@ export default function LoadCollectionPopup({ isOpen, onClose }) {
     const confirmLoadFromDefault = () => {
         loadDefault();
         onClose();
+        setIsExpanded(false);
 
         return addToast(i18n[locale]?.loadFromDefaultSuccess, "success");
     };
