@@ -3066,7 +3066,7 @@
     "rating": 0,
     "group": [{ "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" }],
     "notes": [
-      { "id": "plum_blossom", "ru": "Цветы сливы", "en": "Plum Blossom", "de": "Pflaumenblüte" },
+      { "id": "plum_blossom", "ru": "Цветок сливы", "en": "Plum Blossom", "de": "Pflaumenblüte" },
       { "id": "red_lanterns", "ru": "Красные фонари", "en": "Red Lanterns", "de": "Rote Laternen" },
       { "id": "mandarin", "ru": "Мандарин", "en": "Mandarin", "de": "Mandarine" },
       { "id": "tanghulu", "ru": "Танхулу", "en": "Tanghulu", "de": "Tanghulu" },

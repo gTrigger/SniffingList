@@ -18,42 +18,60 @@ export default function ControlPanel() {
 
     const hasItems = useMemo(() => Array.isArray(items) && items.length > 0, [items]);
 
+    const exportToJson = () => {
+        const blob = new Blob([JSON.stringify(items, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'items.json';
+        a.click();
+        URL.revokeObjectURL(url);
+    };
+
     return (
         <div className={styles.controlPanel}>
             <div className={styles.panelRow}>
                 <Button
                     label={i18n[locale]?.addPerfume}
-                    onClick={() => setActivePopup("add")}
+                    onClick={() => setActivePopup("addPerfume")}
                 />
 
                 <Button
                     label={i18n[locale]?.loadCollection}
-                    onClick={() => setActivePopup("load")}
+                    onClick={() => setActivePopup("loadCollection")}
                 />
 
                 {hasItems && (
-                    <Button
-                        label={i18n[locale]?.removeAll}
-                        onClick={() => setActivePopup("clear")}
-                    />
+                    <>
+                        <Button
+                            label={i18n[locale]?.removeAll}
+                            onClick={() => setActivePopup("clearCollection")}
+                        />
+
+                        <Button
+                            label={i18n[locale]?.downloadCollection}
+                            onClick={exportToJson}
+                        />
+                    </>
                 )}
             </div>
 
-            {activePopup === "add" && (
+            {activePopup === "addPerfume" && (
                 <AddPerfumePopup
                     isOpen={true}
                     onClose={() => setActivePopup(null)}
                 />
             )}
 
-            {activePopup === "load" && (
+            {activePopup === "loadCollection" && (
                 <LoadCollectionPopup
                     isOpen={true}
                     onClose={() => setActivePopup(null)}
                 />
             )}
 
-            {activePopup === "clear" && (
+            {activePopup === "clearCollection" && (
                 <ClearCollectionPopup
                     isOpen={true}
                     onClose={() => setActivePopup(null)}

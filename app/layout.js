@@ -28,7 +28,6 @@ export default function RootLayout({ children }) {
                 </main>
                 <Footer />
                 <Toast />
-                <div id="toastPortal" />
             </AppLoader>
             </body>
         </html>

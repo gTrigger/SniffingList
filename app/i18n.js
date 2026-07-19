@@ -61,6 +61,7 @@ export const i18n = {
         loadCollectionSubtitle: "Вы уверены? Это действие перезапишет всю вашу коллекцию (если она есть) безвозвратно и загрузит выбранную коллекцию.",
         importFromJson: "Импорт из JSON",
         loadDefaultCollection: "Загрузить тест-коллекцию",
+        downloadCollection: "Экспорт в JSON",
         cancelLoadCollection: "Не-а",
         confirmLoadCollection: "Да, перезаписываем",
 
@@ -149,6 +150,7 @@ export const i18n = {
         loadCollectionSubtitle: "Are you sure? This action will permanently overwrite your entire collection (if you have one) and load the selected collection.",
         importFromJson: "Import from JSON",
         loadDefaultCollection: "Load test collection",
+        downloadCollection: "Export to JSON",
         cancelLoadCollection: "Nope",
         confirmLoadCollection: "Yes, overwrite it",
 
@@ -236,6 +238,7 @@ export const i18n = {
         loadCollectionSubtitle: "Sind Sie sicher? Dieser Vorgang überschreibt Ihre gesamte Sammlung (sofern eine vorhanden ist) dauerhaft und lädt die ausgewählte Sammlung.",
         importFromJson: "Aus JSON importieren",
         loadDefaultCollection: "Test-Sammlung laden",
+        downloadCollection: "Als JSON exportieren",
         cancelLoadCollection: "Nein-nein",
         confirmLoadCollection: "Ja, überschreiben",
 

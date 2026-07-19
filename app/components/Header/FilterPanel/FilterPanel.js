@@ -46,15 +46,17 @@ export default function FilterPanel() {
 
     const uniqueGroups = useMemo(() => {
         if (!items) return [];
-        return Array.from(new Map(items.flatMap(item => item.group || []).map(g => [g.en, g])).values())
-            .sort((a, b) => a.en.localeCompare(b.en));
-    }, [items]);
+        return Array
+            .from(new Map(items.flatMap(item => item.group || []).map(g => [g[locale], g])).values())
+            .sort((a, b) => a[locale].localeCompare(b[locale]));
+    }, [items, locale]);
 
     const uniqueNotes = useMemo(() => {
         if (!items) return [];
-        return Array.from(new Map(items.flatMap(item => item.notes || []).map(n => [n.en, n])).values())
-            .sort((a, b) => a.en.localeCompare(b.en));
-    }, [items]);
+        return Array
+            .from(new Map(items.flatMap(item => item.notes || []).map(n => [n[locale], n])).values())
+            .sort((a, b) => a[locale].localeCompare(b[locale]));
+    }, [items, locale]);
 
     const resetAllFilters = () => {
         setSearchQuery("");

@@ -1,7 +1,6 @@
 "use client";
 
 import styles from './Toast.module.css';
-import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { i18n } from "@/i18n";
 import { useAppSettingsStore } from "@/store/useAppSettingsStore";
@@ -11,13 +10,8 @@ import Button from "@/components/common/Button/Button";
 export default function Toast() {
     const { toasts, removeToast } = useToastStore();
     const { locale } = useAppSettingsStore();
-    const [portalElement, setPortalElement] = useState(null);
 
-    useEffect(() => {
-        setPortalElement(document.getElementById('toastPortal'));
-    }, []);
-
-    if (!portalElement || toasts.length === 0) return null;
+    if (toasts.length === 0) return null;
 
     return createPortal(
         <div
@@ -40,6 +34,6 @@ export default function Toast() {
                 </div>
             ))}
         </div>,
-        portalElement
+        document.body
     );
 }

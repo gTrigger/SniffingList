@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'RhythmicIcon';
+    src: url('@/fonts/RhythmicSVG.otf') format('opentype');
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -73,9 +78,4 @@ main {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
-}
-
-#toastPortal {
-    position: fixed;
-    z-index: 9999;
 }
