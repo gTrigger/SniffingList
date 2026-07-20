@@ -5,22 +5,22 @@ import Footer from "@/components/Footer/Footer.js"
 import Toast from "@/components/common/Toast/Toast.js";
 import AppLoader from "@/components/AppLoader/AppLoader.js";
 
-const primaryFont = localFont({
+const montserratFont = localFont({
     src: './fonts/Montserrat.ttf',
-    variable: '--primary-font',
+    variable: '--montserrat-font',
     display: 'swap',
 });
 
-const accentFont = localFont({
+const rhythmicFont = localFont({
     src: './fonts/RhythmicSVG.otf',
-    variable: '--accent-font',
+    variable: '--rhythmic-font',
     display: 'block',
 });
 
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body className={`${primaryFont.variable} ${accentFont.variable}`}>
+            <body className={`${montserratFont.variable} ${rhythmicFont.variable}`}>
             <AppLoader>
                 <Header />
                 <main>

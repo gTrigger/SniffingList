@@ -35,7 +35,7 @@ export default function LoadCollectionPopup({ isOpen, onClose }) {
                 const importedData = JSON.parse(event.target.result);
 
                 setItems(importedData);
-            } catch (err) {
+            } catch {
                 return addToast(i18n[locale]?.jsonReadingError, "error");
             }
         };

@@ -25,7 +25,7 @@
 .selectWrapper button {
     margin-left: var(--base-spacing-unit-2x);
     vertical-align: middle;
-    color: black;
+    color: rgba(var(--primary-font-color), var(--primary-opacity));
 }
 
 .selectWrapper button:hover {

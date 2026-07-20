@@ -14,6 +14,12 @@
     transform-origin: top;
 }
 
+.panel {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: -webkit-fill-available;
+}
+
 .mainPanel {
     display: flex;
     flex-wrap: wrap;
@@ -62,10 +68,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
+    width: var(--icon-button-width);
+    height: var(--icon-button-height);
     border: none;
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(var(--primary-font-color), var(--tertiary-opacity));
     align-self: center;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     font-family: var(--accent-font);
@@ -75,7 +81,7 @@
 }
 
 .toggleButton:hover {
-    color: rgba(0, 0, 0, 1);
+    color: rgba(var(--primary-font-color), var(--primary-opacity));
 }
 
 .toggleButton.active {
@@ -83,10 +89,6 @@
 }
 
 @media (max-width: 768px) {
-    .header.open {
-        height: 100%
-    }
-
     .mainPanel h1 {
         font-size: 50px;
     }

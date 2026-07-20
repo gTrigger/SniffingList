@@ -1,6 +1,7 @@
 .addPerfumeForm {
     display: flex;
     gap: var(--base-spacing-unit-8x);
+    flex-wrap: wrap;
 }
 
 .addPerfumePopup .previewCard {

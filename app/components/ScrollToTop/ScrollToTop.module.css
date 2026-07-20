@@ -5,7 +5,7 @@
     z-index: 1000;
     width: 45px;
     height: 45px;
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(var(--primary-font-color), var(--tertiary-opacity));
     cursor: pointer;
     opacity: 0;
     transform: translateY(20px);

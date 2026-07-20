@@ -6,7 +6,7 @@
     font-family: var(--primary-font);
     border: none;
     background: transparent;
-    color: #333;
+    color: rgba(var(--primary-font-color), var(--primary-opacity));
     width: 300px;
     padding: var(--base-spacing-unit-4x) var(--base-spacing-unit);
     box-sizing: border-box;

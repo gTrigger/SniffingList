@@ -52,7 +52,7 @@ export default function AddPerfumePopup({ isOpen, onClose }) {
             } else {
                 return addToast(i18n[locale]?.getPerfumeDataError, "error");
             }
-        } catch (error) {
+        } catch {
             return addToast(i18n[locale]?.serverError, "error");
         } finally {
             setIsLoading(false);

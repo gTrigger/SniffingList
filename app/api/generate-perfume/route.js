@@ -88,7 +88,7 @@ export async function POST(request) {
 
             return NextResponse.json(parsedData);
         } catch (parseError) {
-            return NextResponse.json({ error: i18n[locale]?.jsonWrongFormatError }, { status: 500 });
+            return NextResponse.json({ error: `${i18n[locale]?.jsonWrongFormatError}: ${parseError}`  }, { status: 500 });
         }
 
     } catch (error) {

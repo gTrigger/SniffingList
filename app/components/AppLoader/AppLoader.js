@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { i18n } from "@/i18n";
 import { useAppSettingsStore } from "@/store/useAppSettingsStore";
 import styles from './AppLoader.module.css';

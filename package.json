@@ -1,7 +1,8 @@
 {
-  "name": "perfume-app",
+  "name": "sniffing-list",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -13,5 +14,12 @@
     "react": "^18",
     "react-dom": "^18",
     "zustand": "^5.0.14"
+  },
+  "devDependencies": {
+    "eslint": "^10.7.0",
+    "eslint-config-next": "^16.2.10",
+    "globals": "^17.7.0",
+    "@eslint/js": "^10.0.1",
+    "@next/eslint-plugin-next": "^16.2.10"
   }
 }

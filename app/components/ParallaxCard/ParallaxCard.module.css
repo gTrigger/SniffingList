@@ -1,29 +1,19 @@
-@keyframes fade-in-bg {
-    from {
-        filter: brightness(0.8) blur(5px);
-        opacity: 0.5;
-    }
-    to {
-        filter: brightness(1) blur(0);
-        opacity: 1;
-    }
-}
-
 .cardWrap {
-    --hover-easing: cubic-bezier(0.23, 1, 0.32, 1);
-    --return-easing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    --card-width: 250px;
+    --card-height: 300px;
     --slide-content-height: 150px;
     --header-top-position: 10px;
     --card-background-perspective: 600px;
     --card-background-margin: 20px;
-    --card-gradient: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, 0.85) 100%);
     --card-shadow: rgba(0, 0, 0, 0.66) 0 10px 20px 0;
+    --card-gradient: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, 0.85) 100%);
+    --hover-easing: cubic-bezier(0.23, 1, 0.32, 1);
+    --return-easing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
     cursor: initial;
     width: var(--card-width);
     border-radius: var(--default-border-radius);
     margin: 0;
-    flex: 0 0 var(--card-width);
     transform: perspective(var(--card-background-perspective));
     transform-style: preserve-3d;
 }
@@ -49,7 +39,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    animation: fade-in-bg 0.4s ease-in-out;
+    animation: fadeInBg 0.4s ease-in-out;
     transition: 1s var(--return-easing), opacity 1s var(--return-easing);
 }
 
@@ -64,7 +54,7 @@
     gap: var(--base-spacing-unit-4x);
     box-sizing: border-box;
     z-index: 2;
-    color: #fff;
+    color: rgba(var(--secondary-font-color), var(--primary-opacity));
     transition: top 0.6s var(--hover-easing);
 }
 
@@ -100,10 +90,10 @@
     opacity: 0;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.6s var(--hover-easing);
     display: flex;
     flex-direction: column;
     gap: var(--base-spacing-unit-4x);
+    transition: all 0.6s var(--hover-easing);
 }
 
 .cardWrap:hover .cardContent {
@@ -116,8 +106,8 @@
 }
 
 .cardWrap:hover .cardBg {
-    transition: 0.6s var(--hover-easing), opacity 1s var(--hover-easing);
     opacity: 1;
+    transition: 0.6s var(--hover-easing), opacity 1s var(--hover-easing);
 }
 
 .cardWrap:hover .card {
@@ -132,10 +122,9 @@
     position: absolute;
     top: 30px;
     right: 30px;
-    color: rgba(255, 255, 255, 1);
+    color: rgba(var(--secondary-font-color), var(--primary-opacity));
     border: none;
     cursor: pointer;
-    transition: 0.4s;
     z-index: 100;
     background: none;
     transform: translateZ(50px);
@@ -143,10 +132,11 @@
     filter: invert(100%) brightness(500%);
     font-family: var(--accent-font);
     font-size: 30px;
+    transition: 0.4s;
 }
 
 .cardWrap .removeButton:hover {
-    color: white;
+    color: rgba(var(--secondary-font-color), var(--primary-opacity));
 }
 
 .cardWrap .removeButton:focus {
@@ -164,7 +154,7 @@
 .tagHeading {
     font-family: var(--primary-font);
     font-size: var(--quaternary-font-size);
-    color: rgba(255, 255, 255, .8);
+    color: rgba(var(--secondary-font-color), var(--secondary-opacity));
     margin: 0;
     text-transform: uppercase;
     text-align: center;
@@ -177,5 +167,19 @@
     .card, .cardBg {
         transition: none !important;
         transform: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .cardWrap {
+        --card-width: 300px;
+        --card-height: 200px;
+        --slide-content-height: 100px;
+    }
+
+    .cardWrap .removeButton {
+        top: 20px;
+        right: 25px;
+        font-size: 25px;
     }
 }

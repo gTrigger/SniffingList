@@ -46,6 +46,6 @@
 
 @media (max-width: 768px) {
     .container {
-        padding: 130px var(--base-spacing-unit-16x) 50px;
+        padding: 120px var(--base-spacing-unit-8x) 50px;
     }
 }

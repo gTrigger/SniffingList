@@ -27,13 +27,14 @@ export default function Header() {
 
     return (
         <header className={`${styles.header} ${isExpanded ? styles.open : ''}`.trim()}>
-            <div className={styles.mainPanel}>
+            <div
+                className={`${styles.panel} ${styles.mainPanel}`}>
                 <h1>{i18n[locale]?.title}</h1>
                 <LanguageSelector />
             </div>
 
             <section
-                className={styles.secondaryPanel}
+                className={`${styles.panel} ${styles.secondaryPanel}`}
                 aria-hidden={!isExpanded}
             >
                 <div className={styles.expandablePanel}>
