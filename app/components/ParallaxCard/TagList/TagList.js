@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import styles from "./TagList.module.css";
+import styles from "./TagList.module.scss";
 
 export default function TagList({ items }) {
     const containerRef = useRef(null);

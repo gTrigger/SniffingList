@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./Header.module.css";
+import styles from "./Header.module.scss";
 import { useEffect, useState, useMemo } from "react";
 import { i18n } from "@/i18n";
 import { useAppSettingsStore } from "@/store/useAppSettingsStore";

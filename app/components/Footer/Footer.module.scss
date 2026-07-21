@@ -1,0 +1,25 @@
+.footer {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--base-spacing-unit-4x);
+    padding: var(--base-spacing-unit-4x) var(--base-spacing-unit-16x);
+    margin: 0 auto;
+    position: sticky;
+    bottom: 0;
+    will-change: backdrop-filter;
+    background: var(--primary-blur-background);
+    backdrop-filter: var(--default-blur-filter);
+
+    .socialLink {
+        color: rgba(var(--primary-font-color), var(--tertiary-opacity));
+        writing-mode: vertical-lr;
+
+        &:hover {
+            color: rgba(var(--primary-font-color), var(--secondary-opacity));
+        }
+    }
+}

@@ -1,0 +1,9 @@
+.actionWrapper {
+    display: flex;
+    flex-flow: column;
+    align-items: end;
+
+    button {
+        align-self: end;
+    }
+}

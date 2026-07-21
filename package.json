@@ -13,13 +13,14 @@
     "next": "16.2.6",
     "react": "^18",
     "react-dom": "^18",
+    "sass": "^1.101.0",
     "zustand": "^5.0.14"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@next/eslint-plugin-next": "^16.2.10",
     "eslint": "^10.7.0",
     "eslint-config-next": "^16.2.10",
-    "globals": "^17.7.0",
-    "@eslint/js": "^10.0.1",
-    "@next/eslint-plugin-next": "^16.2.10"
+    "globals": "^17.7.0"
   }
 }

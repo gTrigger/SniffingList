@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./AddPerfumePopup.module.css";
+import styles from "./AddPerfumePopup.module.scss";
 import { useState } from "react";
 import { i18n } from "@/i18n";
 import { useAppSettingsStore } from "@/store/useAppSettingsStore";
@@ -50,7 +50,9 @@ export default function AddPerfumePopup({ isOpen, onClose }) {
 
                 setPreviewItem(newData);
             } else {
-                return addToast(i18n[locale]?.getPerfumeDataError, "error");
+                const errorMessage = newData.error || i18n[locale]?.getPerfumeDataError;
+
+                return addToast(errorMessage, "error");
             }
         } catch {
             return addToast(i18n[locale]?.serverError, "error");
@@ -125,7 +127,12 @@ export default function AddPerfumePopup({ isOpen, onClose }) {
 
             {previewItem && (
                 <>
-                    <p className="subtitle">
+                    <p className={`${styles.previewSubtitle} subtitle`}>
+                        <b>{i18n[locale]?.warning}</b>:&nbsp;
+                        {i18n[locale]?.dataDisclaimer}
+                    </p>
+
+                    <p className={`${styles.previewSubtitle} subtitle`}>
                         {i18n[locale]?.previewPerfumeProfileTitle} 👀
                     </p>
 

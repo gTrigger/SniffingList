@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./Select.module.css";
+import styles from "./Select.module.scss";
 import { i18n } from "@/i18n";
 import { useAppSettingsStore } from "@/store/useAppSettingsStore";
 import Button from "@/components/common/Button/Button";
@@ -25,6 +25,7 @@ export default function Select({
 
             <select
                 id={id}
+                className={styles.select}
                 onChange={(e) => {
                     onChange(e.target.value);
                     e.target.blur();
@@ -42,6 +43,7 @@ export default function Select({
 
             {onClear && (
                 <Button
+                    className={styles.removeButton}
                     icon="cancel"
                     label={i18n[locale].cancelSelection}
                     onClick={onClear}

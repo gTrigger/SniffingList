@@ -6,7 +6,7 @@ import { i18n } from "./i18n";
 import { useAppSettingsStore } from "./store/useAppSettingsStore";
 import { useItemsStore } from "./store/useItemsStore";
 import { useFilterStore } from './store/useFilterStore';
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 import ParallaxCard from "./components/ParallaxCard/ParallaxCard";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import AddPerfumePopup from "@/components/Popups/AddPerfumePopup/AddPerfumePopup";

@@ -1,0 +1,10 @@
+.languageSelector {
+    display: flex;
+    gap: var(--base-spacing-unit-2x);
+    margin: auto 0;
+    font-size: var(--button-font-size);
+
+    .languageButton.active {
+        font-weight: bold;
+    }
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./Footer.module.css";
+import styles from "./Footer.module.scss";
 import { useEffect, useState } from "react";
 import { i18n } from "@/i18n";
 import { useAppSettingsStore } from "@/store/useAppSettingsStore";

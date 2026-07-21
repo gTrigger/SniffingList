@@ -23,7 +23,7 @@ export const useFilterStore = create((set) => ({
     setFilterNote: (val) => set({ filterNote: val }),
     setVisibleCount: (val) => set({ visibleCount: val }),
 
-    resetFilters: () => set({
+    resetAllFilters: () => set({
         searchQuery: '',
         sortOrder: 'asc',
         filterBrand: '',

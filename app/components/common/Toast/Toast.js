@@ -1,6 +1,6 @@
 "use client";
 
-import styles from './Toast.module.css';
+import styles from './Toast.module.scss';
 import { createPortal } from 'react-dom';
 import { i18n } from "@/i18n";
 import { useAppSettingsStore } from "@/store/useAppSettingsStore";

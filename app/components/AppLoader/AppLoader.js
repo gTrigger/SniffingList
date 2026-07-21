@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { i18n } from "@/i18n";
 import { useAppSettingsStore } from "@/store/useAppSettingsStore";
-import styles from './AppLoader.module.css';
+import styles from './AppLoader.module.scss';
 
 const FALLBACK_LOCALE = "en";
 const MIN_LOADING_DELAY_MS = 3000;

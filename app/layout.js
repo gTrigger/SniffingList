@@ -1,9 +1,9 @@
-import "@/styles.css";
+import "@/styles.scss";
 import localFont from 'next/font/local';
-import Header from "@/components/Header/Header.js"
-import Footer from "@/components/Footer/Footer.js"
-import Toast from "@/components/common/Toast/Toast.js";
-import AppLoader from "@/components/AppLoader/AppLoader.js";
+import Header from "@/components/Header/Header"
+import Footer from "@/components/Footer/Footer"
+import Toast from "@/components/common/Toast/Toast";
+import AppLoader from "@/components/AppLoader/AppLoader";
 
 const montserratFont = localFont({
     src: './fonts/Montserrat.ttf',

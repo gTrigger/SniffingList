@@ -3,7 +3,6 @@
     "id": 1,
     "brand": "Parfumerie Particulière",
     "name": "Type Writer",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "leather", "ru": "Кожаные", "en": "Leather", "de": "Leder" }
@@ -21,7 +20,6 @@
     "id": 2,
     "brand": "Parfumerie Particulière",
     "name": "Black Tar",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "mineral", "ru": "Минеральные", "en": "Mineral", "de": "Mineralisch" },
@@ -40,7 +38,6 @@
     "id": 3,
     "brand": "Parfumerie Particulière",
     "name": "The Saint Mariner",
-    "rating": 0,
     "group": [
       { "id": "aquatic", "ru": "Акватические", "en": "Aquatic", "de": "Aquatisch" },
       { "id": "citrus", "ru": "Цитрусовые", "en": "Citrus", "de": "Zitrus" }
@@ -58,7 +55,6 @@
     "id": 4,
     "brand": "Parfumerie Particulière",
     "name": "Pluie Noire",
-    "rating": 0,
     "group": [
       { "id": "aquatic", "ru": "Акватические", "en": "Aquatic", "de": "Aquatisch" },
       { "id": "fresh_spicy", "ru": "Свежие пряные", "en": "Fresh Spicy", "de": "Frisch-würzig" },
@@ -77,7 +73,6 @@
     "id": 5,
     "brand": "Liquides Imaginaires",
     "name": "Ame Du Coeur",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "spicy", "ru": "Пряные", "en": "Spicy", "de": "Würzig" },
@@ -96,7 +91,6 @@
     "id": 6,
     "brand": "Liquides Imaginaires",
     "name": "Abyssis",
-    "rating": 0,
     "group": [
       { "id": "aquatic", "ru": "Акватические", "en": "Aquatic", "de": "Aquatisch" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" }
@@ -114,7 +108,6 @@
     "id": 7,
     "brand": "Liquides Imaginaires",
     "name": "Navis",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "aquatic", "ru": "Акватические", "en": "Aquatic", "de": "Aquatisch" },
@@ -133,7 +126,6 @@
     "id": 8,
     "brand": "Liquides Imaginaires",
     "name": "Lunatique",
-    "rating": 0,
     "group": [
       { "id": "fresh_spicy", "ru": "Свежие пряные", "en": "Fresh Spicy", "de": "Frisch-würzig" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
@@ -152,7 +144,6 @@
     "id": 9,
     "brand": "Liquides Imaginaires",
     "name": "Bloody Wood",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "wine", "ru": "Винные", "en": "Wine", "de": "Wein" },
@@ -171,7 +162,6 @@
     "id": 10,
     "brand": "Toskovat'",
     "name": "Generation Godard",
-    "rating": 0,
     "group": [
       { "id": "sweet", "ru": "Сладкие", "en": "Sweet", "de": "Süß" },
       { "id": "gourmand", "ru": "Гурманские", "en": "Gourmand", "de": "Gourmand" }
@@ -189,7 +179,6 @@
     "id": 11,
     "brand": "Toskovat'",
     "name": "Age of Innocence",
-    "rating": 0,
     "group": [
       { "id": "sweet", "ru": "Сладкие", "en": "Sweet", "de": "Süß" },
       { "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" },
@@ -208,7 +197,6 @@
     "id": 12,
     "brand": "Toskovat'",
     "name": "F7",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" }
@@ -226,7 +214,6 @@
     "id": 13,
     "brand": "Toskovat'",
     "name": "Silent at the Theme Park",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
@@ -245,7 +232,6 @@
     "id": 14,
     "brand": "Toskovat'",
     "name": "Curtain Call",
-    "rating": 0,
     "group": [
       { "id": "sweet", "ru": "Сладкие", "en": "Sweet", "de": "Süß" },
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" }
@@ -263,7 +249,6 @@
     "id": 15,
     "brand": "Toskovat'",
     "name": "Things we never shared",
-    "rating": 0,
     "group": [
       { "id": "sweet", "ru": "Сладкие", "en": "Sweet", "de": "Süß" },
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" }
@@ -281,7 +266,6 @@
     "id": 16,
     "brand": "Toskovat'",
     "name": "Я",
-    "rating": 0,
     "group": [
       { "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" },
       { "id": "wine", "ru": "Винные", "en": "Wine", "de": "Wein" },
@@ -300,7 +284,6 @@
     "id": 17,
     "brand": "Toskovat'",
     "name": "F2",
-    "rating": 0,
     "group": [
       { "id": "musky", "ru": "Мускусные", "en": "Musky", "de": "Moschusartig" },
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
@@ -319,7 +302,6 @@
     "id": 18,
     "brand": "Toskovat'",
     "name": "Pining Dew 2",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "fresh_spicy", "ru": "Свежие пряные", "en": "Fresh Spicy", "de": "Frisch-würzig" },
@@ -338,7 +320,6 @@
     "id": 19,
     "brand": "Toskovat'",
     "name": "Annacamento",
-    "rating": 0,
     "group": [
       { "id": "citrus", "ru": "Цитрусовые", "en": "Citrus", "de": "Zitrus" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
@@ -357,7 +338,6 @@
     "id": 20,
     "brand": "Toskovat'",
     "name": "Inexcusable Evil",
-    "rating": 0,
     "group": [
       { "id": "mineral", "ru": "Минеральные", "en": "Mineral", "de": "Mineralisch" },
       { "id": "smoky", "ru": "Дымные", "en": "Smoky", "de": "Rauchig" },
@@ -376,7 +356,6 @@
     "id": 21,
     "brand": "Toskovat'",
     "name": "Anarchist A",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "wine", "ru": "Винные", "en": "Wine", "de": "Wein" },
@@ -395,7 +374,6 @@
     "id": 22,
     "brand": "Imaginary Authors",
     "name": "Saint Julep",
-    "rating": 0,
     "group": [
       { "id": "sweet", "ru": "Сладкие", "en": "Sweet", "de": "Süß" },
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
@@ -414,7 +392,6 @@
     "id": 23,
     "brand": "Imaginary Authors",
     "name": "The Soft Lawn",
-    "rating": 0,
     "group": [
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
@@ -433,7 +410,6 @@
     "id": 24,
     "brand": "Imaginary Authors",
     "name": "Sundrunk",
-    "rating": 0,
     "group": [
       { "id": "citrus", "ru": "Цитрусовые", "en": "Citrus", "de": "Zitrus" },
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" }
@@ -451,7 +427,6 @@
     "id": 25,
     "brand": "Imaginary Authors",
     "name": "A Whiff of Waffle Cone",
-    "rating": 0,
     "group": [
       { "id": "sweet", "ru": "Сладкие", "en": "Sweet", "de": "Süß" },
       { "id": "vanilla", "ru": "Ванильные", "en": "Vanilla", "de": "Vanille" },
@@ -470,7 +445,6 @@
     "id": 26,
     "brand": "Imaginary Authors",
     "name": "Yesterday Haze",
-    "rating": 0,
     "group": [
       { "id": "sweet", "ru": "Сладкие", "en": "Sweet", "de": "Süß" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
@@ -489,7 +463,6 @@
     "id": 27,
     "brand": "Imaginary Authors",
     "name": "In Love with Everything",
-    "rating": 0,
     "group": [
       { "id": "sweet", "ru": "Сладкие", "en": "Sweet", "de": "Süß" },
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
@@ -508,7 +481,6 @@
     "id": 28,
     "brand": "Imaginary Authors",
     "name": "Falling into the Sea",
-    "rating": 0,
     "group": [
       { "id": "citrus", "ru": "Цитрусовые", "en": "Citrus", "de": "Zitrus" },
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
@@ -527,7 +499,6 @@
     "id": 29,
     "brand": "Imaginary Authors",
     "name": "Fox in the Flowerbed",
-    "rating": 0,
     "group": [
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
       { "id": "fresh_spicy", "ru": "Свежие пряные", "en": "Fresh Spicy", "de": "Frisch-würzig" }
@@ -545,7 +516,6 @@
     "id": 30,
     "brand": "Imaginary Authors",
     "name": "O, Unknown!",
-    "rating": 0,
     "group": [
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
@@ -564,7 +534,6 @@
     "id": 31,
     "brand": "Imaginary Authors",
     "name": "City on Fire",
-    "rating": 0,
     "group": [
       { "id": "smoky", "ru": "Дымные", "en": "Smoky", "de": "Rauchig" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" }
@@ -582,7 +551,6 @@
     "id": 32,
     "brand": "Imaginary Authors",
     "name": "Memoirs of a Trespasser",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "vanilla", "ru": "Ванильные", "en": "Vanilla", "de": "Vanille" }
@@ -600,7 +568,6 @@
     "id": 33,
     "brand": "Imaginary Authors",
     "name": "Slow Explosions",
-    "rating": 0,
     "group": [
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
       { "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" },
@@ -619,7 +586,6 @@
     "id": 34,
     "brand": "Imaginary Authors",
     "name": "Cape Heartache",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" },
@@ -638,7 +604,6 @@
     "id": 35,
     "brand": "Imaginary Authors",
     "name": "Every Storm a Serenade",
-    "rating": 0,
     "group": [
       { "id": "aquatic", "ru": "Акватические", "en": "Aquatic", "de": "Aquatisch" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
@@ -657,7 +622,6 @@
     "id": 36,
     "brand": "Jo Malone",
     "name": "Nasturtium & Clover",
-    "rating": 0,
     "group": [
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" }
@@ -675,7 +639,6 @@
     "id": 37,
     "brand": "Jo Malone",
     "name": "Blackberry & Bay",
-    "rating": 0,
     "group": [
       { "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" },
       { "id": "fresh_spicy", "ru": "Свежие пряные", "en": "Fresh Spicy", "de": "Frisch-würzig" },
@@ -694,7 +657,6 @@
     "id": 38,
     "brand": "Jo Malone",
     "name": "Wood Sage & Sea Salt",
-    "rating": 0,
     "group": [
       { "id": "aquatic", "ru": "Акватические", "en": "Aquatic", "de": "Aquatisch" },
       { "id": "citrus", "ru": "Цитрусовые", "en": "Citrus", "de": "Zitrus" },
@@ -712,7 +674,6 @@
     "id": 39,
     "brand": "Jo Malone",
     "name": "Wild Strawberry & Parsley",
-    "rating": 0,
     "group": [
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
       { "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" }
@@ -730,7 +691,6 @@
     "id": 40,
     "brand": "Jo Malone",
     "name": "Carrot Blossom & Fennel",
-    "rating": 0,
     "group": [
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" }
@@ -748,7 +708,6 @@
     "id": 41,
     "brand": "Jo Malone",
     "name": "Jade Leaf Tea",
-    "rating": 0,
     "group": [
       { "id": "fresh_spicy", "ru": "Свежие пряные", "en": "Fresh Spicy", "de": "Frisch-würzig" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
@@ -767,7 +726,6 @@
     "id": 42,
     "brand": "Jo Malone",
     "name": "Pomegranate Noir",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" },
@@ -786,7 +744,6 @@
     "id": 43,
     "brand": "Jo Malone",
     "name": "English Pear & Freesia",
-    "rating": 0,
     "group": [
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
       { "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" }
@@ -804,7 +761,6 @@
     "id": 44,
     "brand": "Jo Malone",
     "name": "Earl Grey & Cucumber",
-    "rating": 0,
     "group": [
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
       { "id": "citrus", "ru": "Цитрусовые", "en": "Citrus", "de": "Zitrus" },
@@ -823,7 +779,6 @@
     "id": 45,
     "brand": "Jo Malone",
     "name": "Yuja",
-    "rating": 0,
     "group": [
       { "id": "citrus", "ru": "Цитрусовые", "en": "Citrus", "de": "Zitrus" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" }
@@ -839,7 +794,6 @@
     "id": 46,
     "brand": "Fischersund",
     "name": "Útilykt Spray - 66°Norður",
-    "rating": 0,
     "group": [
       { "id": "fresh_spicy", "ru": "Свежие пряные", "en": "Fresh Spicy", "de": "Frisch-würzig" },
       { "id": "leather", "ru": "Кожаные", "en": "Leather", "de": "Leder" },
@@ -857,7 +811,6 @@
     "id": 47,
     "brand": "Fischersund",
     "name": "№54",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "leather", "ru": "Кожаные", "en": "Leather", "de": "Leder" },
@@ -875,7 +828,6 @@
     "id": 48,
     "brand": "Fischersund",
     "name": "№8",
-    "rating": 0,
     "group": [
       { "id": "fresh_spicy", "ru": "Свежие пряные", "en": "Fresh Spicy", "de": "Frisch-würzig" },
       { "id": "citrus", "ru": "Цитрусовые", "en": "Citrus", "de": "Zitrus" },
@@ -893,7 +845,6 @@
     "id": 49,
     "brand": "Fischersund",
     "name": "№23",
-    "rating": 0,
     "group": [
       { "id": "leather", "ru": "Кожаные", "en": "Leather", "de": "Leder" },
       { "id": "fresh_spicy", "ru": "Свежие пряные", "en": "Fresh Spicy", "de": "Frisch-würzig" },
@@ -911,7 +862,6 @@
     "id": 50,
     "brand": "Fischersund",
     "name": "Flotholt",
-    "rating": 0,
     "group": [
       { "id": "aquatic", "ru": "Акватические", "en": "Aquatic", "de": "Aquatisch" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
@@ -929,7 +879,6 @@
     "id": 51,
     "brand": "Fischersund",
     "name": "№101",
-    "rating": 0,
     "group": [
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
@@ -947,7 +896,6 @@
     "id": 52,
     "brand": "Stora Skuggan",
     "name": "Mistpouffer",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "sweet", "ru": "Сладкие", "en": "Sweet", "de": "Süß" },
@@ -966,7 +914,6 @@
     "id": 53,
     "brand": "Stora Skuggan",
     "name": "Hexensalbe",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "fresh_spicy", "ru": "Свежие пряные", "en": "Fresh Spicy", "de": "Frisch-würzig" },
@@ -985,7 +932,6 @@
     "id": 54,
     "brand": "Stora Skuggan",
     "name": "Fantome de Maules",
-    "rating": 0,
     "group": [
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
@@ -1004,7 +950,6 @@
     "id": 55,
     "brand": "d'Annam",
     "name": "White Rice",
-    "rating": 0,
     "group": [
       { "id": "powdery", "ru": "Пудровые", "en": "Powdery", "de": "Pudrig" },
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
@@ -1023,7 +968,6 @@
     "id": 56,
     "brand": "d'Annam",
     "name": "Monsoon Tea",
-    "rating": 0,
     "group": [
       { "id": "citrus", "ru": "Цитрусовые", "en": "Citrus", "de": "Zitrus" },
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
@@ -1042,7 +986,6 @@
     "id": 57,
     "brand": "d'Annam",
     "name": "In The Garden",
-    "rating": 0,
     "group": [
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
       { "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" },
@@ -1060,7 +1003,6 @@
     "id": 58,
     "brand": "d'Annam",
     "name": "Harvest Season",
-    "rating": 0,
     "group": [
       { "id": "citrus", "ru": "Цитрусовые", "en": "Citrus", "de": "Zitrus" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
@@ -1079,7 +1021,6 @@
     "id": 59,
     "brand": "d'Annam",
     "name": "Phu Quoc",
-    "rating": 0,
     "group": [
       { "id": "aquatic", "ru": "Акватические", "en": "Aquatic", "de": "Aquatisch" },
       { "id": "citrus", "ru": "Цитрусовые", "en": "Citrus", "de": "Zitrus" },
@@ -1098,7 +1039,6 @@
     "id": 60,
     "brand": "d'Annam",
     "name": "Da Lat",
-    "rating": 0,
     "group": [
       { "id": "wine", "ru": "Винные", "en": "Wine", "de": "Wein" },
       { "id": "sweet", "ru": "Сладкие", "en": "Sweet", "de": "Süß" },
@@ -1117,7 +1057,6 @@
     "id": 61,
     "brand": "d'Annam",
     "name": "Pho Breakfast",
-    "rating": 0,
     "group": [
       { "id": "fresh_spicy", "ru": "Свежие пряные", "en": "Fresh Spicy", "de": "Frisch-würzig" },
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
@@ -1136,7 +1075,6 @@
     "id": 62,
     "brand": "d'Annam",
     "name": "Through The Forest",
-    "rating": 0,
     "group": [
       { "id": "fresh_spicy", "ru": "Свежие пряные", "en": "Fresh Spicy", "de": "Frisch-würzig" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
@@ -1155,7 +1093,6 @@
     "id": 63,
     "brand": "d'Annam",
     "name": "Vietnamese Coffee",
-    "rating": 0,
     "group": [
       { "id": "fresh_spicy", "ru": "Свежие пряные", "en": "Fresh Spicy", "de": "Frisch-würzig" },
       { "id": "sweet", "ru": "Сладкие", "en": "Sweet", "de": "Süß" },
@@ -1174,7 +1111,6 @@
     "id": 64,
     "brand": "d'Annam",
     "name": "Moonlight Samurai",
-    "rating": 0,
     "group": [
       { "id": "leather", "ru": "Кожаные", "en": "Leather", "de": "Leder" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
@@ -1193,7 +1129,6 @@
     "id": 65,
     "brand": "d'Annam",
     "name": "Tokyo Nights",
-    "rating": 0,
     "group": [
       { "id": "smoky", "ru": "Дымные", "en": "Smoky", "de": "Rauchig" },
       { "id": "wine", "ru": "Винные", "en": "Wine", "de": "Wein" },
@@ -1212,7 +1147,6 @@
     "id": 66,
     "brand": "d'Annam",
     "name": "Sakura Snow",
-    "rating": 0,
     "group": [
       { "id": "fresh_spicy", "ru": "Свежие пряные", "en": "Fresh Spicy", "de": "Frisch-würzig" },
       { "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" },
@@ -1231,7 +1165,6 @@
     "id": 67,
     "brand": "d'Annam",
     "name": "Matcha Soft Serve",
-    "rating": 0,
     "group": [
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
       { "id": "vanilla", "ru": "Ванильные", "en": "Vanilla", "de": "Vanille" },
@@ -1250,7 +1183,6 @@
     "id": 68,
     "brand": "d'Annam",
     "name": "Strawberry Mochi",
-    "rating": 0,
     "group": [
       { "id": "sweet", "ru": "Сладкие", "en": "Sweet", "de": "Süß" },
       { "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" },
@@ -1269,7 +1201,6 @@
     "id": 69,
     "brand": "d'Annam",
     "name": "Kimono",
-    "rating": 0,
     "group": [
       { "id": "powdery", "ru": "Пудровые", "en": "Powdery", "de": "Pudrig" },
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
@@ -1288,7 +1219,6 @@
     "id": 70,
     "brand": "d'Annam",
     "name": "Arashiyama",
-    "rating": 0,
     "group": [
       { "id": "aquatic", "ru": "Акватические", "en": "Aquatic", "de": "Aquatisch" },
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
@@ -1307,7 +1237,6 @@
     "id": 71,
     "brand": "d'Annam",
     "name": "Hinoki Meditation",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "fresh_spicy", "ru": "Свежие пряные", "en": "Fresh Spicy", "de": "Frisch-würzig" },
@@ -1326,7 +1255,6 @@
     "id": 72,
     "brand": "d'Annam",
     "name": "Japanese Whiskey",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "wine", "ru": "Винные", "en": "Wine", "de": "Wein" },
@@ -1345,7 +1273,6 @@
     "id": 73,
     "brand": "Diptyque",
     "name": "Orpheon",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "powdery", "ru": "Пудровые", "en": "Powdery", "de": "Pudrig" },
@@ -1364,7 +1291,6 @@
     "id": 74,
     "brand": "Diptyque",
     "name": "Fleur de Peau",
-    "rating": 0,
     "group": [
       { "id": "musky", "ru": "Мускусные", "en": "Musky", "de": "Moschusartig" },
       { "id": "powdery", "ru": "Пудровые", "en": "Powdery", "de": "Pudrig" },
@@ -1383,7 +1309,6 @@
     "id": 75,
     "brand": "Diptyque",
     "name": "Philosykos",
-    "rating": 0,
     "group": [
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
@@ -1402,7 +1327,6 @@
     "id": 76,
     "brand": "Moth and Rabbit",
     "name": "The Lobster",
-    "rating": 0,
     "group": [
       { "id": "earthy", "ru": "Землистые", "en": "Earthy", "de": "Erdig" },
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
@@ -1421,7 +1345,6 @@
     "id": 77,
     "brand": "Neandertal",
     "name": "Them",
-    "rating": 0,
     "group": [
       { "id": "aquatic", "ru": "Акватические", "en": "Aquatic", "de": "Aquatisch" },
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
@@ -1440,7 +1363,6 @@
     "id": 78,
     "brand": "Neandertal",
     "name": "Dark",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "spicy", "ru": "Пряные", "en": "Spicy", "de": "Würzig" },
@@ -1459,7 +1381,6 @@
     "id": 79,
     "brand": "BMVRLS",
     "name": "Ambroxan Molecule",
-    "rating": 0,
     "group": [
       { "id": "fresh_spicy", "ru": "Свежие пряные", "en": "Fresh Spicy", "de": "Frisch-würzig" },
       { "id": "aquatic", "ru": "Акватические", "en": "Aquatic", "de": "Aquatisch" },
@@ -1475,7 +1396,6 @@
     "id": 80,
     "brand": "27 87",
     "name": "Genetic Bliss",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "musky", "ru": "Мускусные", "en": "Musky", "de": "Moschusartig" }
@@ -1492,7 +1412,6 @@
     "id": 81,
     "brand": "Voyages Imaginaires",
     "name": "L'échappée Sauvage",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "citrus", "ru": "Цитрусовые", "en": "Citrus", "de": "Zitrus" },
@@ -1511,7 +1430,6 @@
     "id": 82,
     "brand": "Andrea Maack",
     "name": "Coven",
-    "rating": 0,
     "group": [
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
       { "id": "earthy", "ru": "Землистые", "en": "Earthy", "de": "Erdig" },
@@ -1530,7 +1448,6 @@
     "id": 83,
     "brand": "Andrea Maack",
     "name": "Flux",
-    "rating": 0,
     "group": [
       { "id": "aquatic", "ru": "Акватические", "en": "Aquatic", "de": "Aquatisch" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" }
@@ -1546,7 +1463,6 @@
     "id": 84,
     "brand": "Andrea Maack",
     "name": "Magma",
-    "rating": 0,
     "group": [
       { "id": "warm_spicy", "ru": "Теплые пряные", "en": "Warm Spicy", "de": "Warm-würzig" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
@@ -1564,7 +1480,6 @@
     "id": 85,
     "brand": "Andrea Maack",
     "name": "Supernova",
-    "rating": 0,
     "group": [
       { "id": "fresh_spicy", "ru": "Свежие пряные", "en": "Fresh Spicy", "de": "Frisch-würzig" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" }
@@ -1581,7 +1496,6 @@
     "id": 86,
     "brand": "Andrea Maack",
     "name": "Jest",
-    "rating": 0,
     "group": [
       { "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" },
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
@@ -1599,7 +1513,6 @@
     "id": 87,
     "brand": "Andrea Maack",
     "name": "Pavilion",
-    "rating": 0,
     "group": [
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" }
@@ -1616,7 +1529,6 @@
     "id": 88,
     "brand": "Heretic Parfum",
     "name": "Poltergeist",
-    "rating": 0,
     "group": [
       { "id": "smoky", "ru": "Дымные", "en": "Smoky", "de": "Rauchig" },
       { "id": "earthy", "ru": "Землистые", "en": "Earthy", "de": "Erdig" },
@@ -1634,7 +1546,6 @@
     "id": 89,
     "brand": "Heretic Parfum",
     "name": "Smudge",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "balsamic", "ru": "Бальзамические", "en": "Balsamic", "de": "Balsamisch" },
@@ -1652,7 +1563,6 @@
     "id": 90,
     "brand": "Heretic Parfum",
     "name": "Midnight Toker",
-    "rating": 0,
     "group": [
       { "id": "spicy", "ru": "Пряные", "en": "Spicy", "de": "Würzig" },
       { "id": "amber", "ru": "Амбра", "en": "Amber", "de": "Ambra" },
@@ -1670,7 +1580,6 @@
     "id": 91,
     "brand": "Heretic Parfum",
     "name": "Dirty Vanilla",
-    "rating": 0,
     "group": [
       { "id": "vanilla", "ru": "Ванильные", "en": "Vanilla", "de": "Vanille" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
@@ -1688,7 +1597,6 @@
     "id": 92,
     "brand": "Heretic Parfum",
     "name": "Dirty Hinoki",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
@@ -1706,7 +1614,6 @@
     "id": 93,
     "brand": "Heretic Parfum",
     "name": "Cactus Abduction",
-    "rating": 0,
     "group": [
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
       { "id": "earthy", "ru": "Землистые", "en": "Earthy", "de": "Erdig" },
@@ -1724,7 +1631,6 @@
     "id": 94,
     "brand": "Wolf Brothers",
     "name": "Wolf",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "spicy", "ru": "Пряные", "en": "Spicy", "de": "Würzig" },
@@ -1743,7 +1649,6 @@
     "id": 95,
     "brand": "Wolf Brothers",
     "name": "Wisent",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
@@ -1761,7 +1666,6 @@
     "id": 96,
     "brand": "Shay & Blue",
     "name": "Kings Wood",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" },
@@ -1779,7 +1683,6 @@
     "id": 97,
     "brand": "Shay & Blue",
     "name": "Framboise Noire",
-    "rating": 0,
     "group": [
       { "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" }
@@ -1796,7 +1699,6 @@
     "id": 98,
     "brand": "Shay & Blue",
     "name": "Watermelons",
-    "rating": 0,
     "group": [
       { "id": "aquatic", "ru": "Акватические", "en": "Aquatic", "de": "Aquatisch" },
       { "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" },
@@ -1814,7 +1716,6 @@
     "id": 99,
     "brand": "Heeley Parfums",
     "name": "Note de Yuzu (x Maison Kitsune)",
-    "rating": 0,
     "group": [
       { "id": "citrus", "ru": "Цитрусовые", "en": "Citrus", "de": "Zitrus" },
       { "id": "aquatic", "ru": "Акватические", "en": "Aquatic", "de": "Aquatisch" }
@@ -1831,7 +1732,6 @@
     "id": 100,
     "brand": "Heeley Parfums",
     "name": "Cocobello",
-    "rating": 0,
     "group": [
       { "id": "sweet", "ru": "Сладкие", "en": "Sweet", "de": "Süß" },
       { "id": "tropical", "ru": "Тропические", "en": "Tropical", "de": "Tropisch" },
@@ -1850,7 +1750,6 @@
     "id": 101,
     "brand": "Heeley Parfums",
     "name": "Menthe Fraiche",
-    "rating": 0,
     "group": [
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
       { "id": "aromatic", "ru": "Фужерные", "en": "Aromatic", "de": "Aromatisch" },
@@ -1868,7 +1767,6 @@
     "id": 102,
     "brand": "Filippo Sorcinelli",
     "name": "Nebbia Spessa",
-    "rating": 0,
     "group": [
       { "id": "aquatic", "ru": "Акватические", "en": "Aquatic", "de": "Aquatisch" },
       { "id": "marine", "ru": "Морские", "en": "Marine", "de": "Maritim" },
@@ -1886,7 +1784,6 @@
     "id": 103,
     "brand": "Filippo Sorcinelli",
     "name": "Quando rapita in estasi",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "smoky", "ru": "Дымные", "en": "Smoky", "de": "Rauchig" },
@@ -1905,7 +1802,6 @@
     "id": 104,
     "brand": "Unum (Filippo Sorcinelli)",
     "name": "But Not Today",
-    "rating": 0,
     "group": [
       { "id": "animalic", "ru": "Анималистические", "en": "Animalic", "de": "Animalisch" },
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
@@ -1924,7 +1820,6 @@
     "id": 105,
     "brand": "Unum (Filippo Sorcinelli)",
     "name": "Symphonie-Passion",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
@@ -1943,7 +1838,6 @@
     "id": 106,
     "brand": "Goti",
     "name": "Gray",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "spicy", "ru": "Пряные", "en": "Spicy", "de": "Würzig" },
@@ -1961,7 +1855,6 @@
     "id": 107,
     "brand": "Zoologist",
     "name": "Bat",
-    "rating": 0,
     "group": [
       { "id": "earthy", "ru": "Землистые", "en": "Earthy", "de": "Erdig" },
       { "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" },
@@ -1980,7 +1873,6 @@
     "id": 108,
     "brand": "Zoologist",
     "name": "Bee",
-    "rating": 0,
     "group": [
       { "id": "sweet", "ru": "Сладкие", "en": "Sweet", "de": "Süß" },
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
@@ -1999,7 +1891,6 @@
     "id": 109,
     "brand": "Zoologist",
     "name": "Camel",
-    "rating": 0,
     "group": [
       { "id": "amber", "ru": "Амбра", "en": "Amber", "de": "Ambra" },
       { "id": "spicy", "ru": "Пряные", "en": "Spicy", "de": "Würzig" },
@@ -2018,7 +1909,6 @@
     "id": 110,
     "brand": "Zoologist",
     "name": "Chameleon",
-    "rating": 0,
     "group": [
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
       { "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" },
@@ -2037,7 +1927,6 @@
     "id": 111,
     "brand": "Zoologist",
     "name": "Chipmunk",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "nutty", "ru": "Ореховые", "en": "Nutty", "de": "Nussig" },
@@ -2056,7 +1945,6 @@
     "id": 112,
     "brand": "Zoologist",
     "name": "Civet",
-    "rating": 0,
     "group": [
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
       { "id": "spicy", "ru": "Пряные", "en": "Spicy", "de": "Würzig" },
@@ -2075,7 +1963,6 @@
     "id": 113,
     "brand": "Zoologist",
     "name": "Cockatiel",
-    "rating": 0,
     "group": [
       { "id": "sweet", "ru": "Сладкие", "en": "Sweet", "de": "Süß" },
       { "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" },
@@ -2094,7 +1981,6 @@
     "id": 114,
     "brand": "Zoologist",
     "name": "Cow",
-    "rating": 0,
     "group": [
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
       { "id": "lactonic", "ru": "Лактонные", "en": "Lactonic", "de": "Laktonisch" },
@@ -2113,7 +1999,6 @@
     "id": 115,
     "brand": "Zoologist",
     "name": "Dodo",
-    "rating": 0,
     "group": [
       { "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" },
       { "id": "aromatic", "ru": "Фужерные", "en": "Aromatic", "de": "Aromatisch" },
@@ -2132,7 +2017,6 @@
     "id": 116,
     "brand": "Zoologist",
     "name": "Dragonfly",
-    "rating": 0,
     "group": [
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
       { "id": "aquatic", "ru": "Акватические", "en": "Aquatic", "de": "Aquatisch" },
@@ -2151,7 +2035,6 @@
     "id": 117,
     "brand": "Zoologist",
     "name": "Elephant",
-    "rating": 0,
     "group": [
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
@@ -2170,7 +2053,6 @@
     "id": 118,
     "brand": "Zoologist",
     "name": "Hummingbird",
-    "rating": 0,
     "group": [
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
       { "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" },
@@ -2189,7 +2071,6 @@
     "id": 119,
     "brand": "Zoologist",
     "name": "Hyrax",
-    "rating": 0,
     "group": [
       { "id": "animalic", "ru": "Анималистические", "en": "Animalic", "de": "Animalisch" },
       { "id": "spicy", "ru": "Пряные", "en": "Spicy", "de": "Würzig" },
@@ -2208,7 +2089,6 @@
     "id": 120,
     "brand": "Zoologist",
     "name": "Koala",
-    "rating": 0,
     "group": [
       { "id": "aromatic", "ru": "Фужерные", "en": "Aromatic", "de": "Aromatisch" },
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
@@ -2227,7 +2107,6 @@
     "id": 121,
     "brand": "Zoologist",
     "name": "Macaque",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
@@ -2246,7 +2125,6 @@
     "id": 122,
     "brand": "Zoologist",
     "name": "Moth",
-    "rating": 0,
     "group": [
       { "id": "smoky", "ru": "Дымные", "en": "Smoky", "de": "Rauchig" },
       { "id": "spicy", "ru": "Пряные", "en": "Spicy", "de": "Würzig" },
@@ -2265,7 +2143,6 @@
     "id": 123,
     "brand": "Zoologist",
     "name": "Musk Deer",
-    "rating": 0,
     "group": [
       { "id": "musky", "ru": "Мускусные", "en": "Musky", "de": "Moschusartig" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
@@ -2284,7 +2161,6 @@
     "id": 124,
     "brand": "Zoologist",
     "name": "Nightingale",
-    "rating": 0,
     "group": [
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
       { "id": "chypre", "ru": "Шипровые", "en": "Chypre", "de": "Chypre" }
@@ -2302,7 +2178,6 @@
     "id": 125,
     "brand": "Zoologist",
     "name": "Northern Cardinal",
-    "rating": 0,
     "group": [
       { "id": "citrus", "ru": "Цитрусовые", "en": "Citrus", "de": "Zitrus" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
@@ -2321,7 +2196,6 @@
     "id": 126,
     "brand": "Zoologist",
     "name": "Panda",
-    "rating": 0,
     "group": [
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
       { "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" },
@@ -2340,7 +2214,6 @@
     "id": 127,
     "brand": "Zoologist",
     "name": "Rabbit",
-    "rating": 0,
     "group": [
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
@@ -2359,7 +2232,6 @@
     "id": 128,
     "brand": "Zoologist",
     "name": "Rhinoceros",
-    "rating": 0,
     "group": [
       { "id": "leather", "ru": "Кожаные", "en": "Leather", "de": "Leder" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
@@ -2378,7 +2250,6 @@
     "id": 129,
     "brand": "Zoologist",
     "name": "Sacred Scarab",
-    "rating": 0,
     "group": [
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
       { "id": "resinous", "ru": "Смолистые", "en": "Resinous", "de": "Harzig" },
@@ -2397,7 +2268,6 @@
     "id": 130,
     "brand": "Zoologist",
     "name": "Seahorse",
-    "rating": 0,
     "group": [
       { "id": "aquatic", "ru": "Акватические", "en": "Aquatic", "de": "Aquatisch" },
       { "id": "aromatic", "ru": "Фужерные", "en": "Aromatic", "de": "Aromatisch" },
@@ -2416,7 +2286,6 @@
     "id": 131,
     "brand": "Zoologist",
     "name": "Sloth",
-    "rating": 0,
     "group": [
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
       { "id": "earthy", "ru": "Землистые", "en": "Earthy", "de": "Erdig" },
@@ -2435,7 +2304,6 @@
     "id": 132,
     "brand": "Zoologist",
     "name": "Snowy Owl",
-    "rating": 0,
     "group": [
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
@@ -2454,7 +2322,6 @@
     "id": 133,
     "brand": "Zoologist",
     "name": "Squid",
-    "rating": 0,
     "group": [
       { "id": "aquatic", "ru": "Акватические", "en": "Aquatic", "de": "Aquatisch" },
       { "id": "resinous", "ru": "Смолистые", "en": "Resinous", "de": "Harzig" },
@@ -2473,7 +2340,6 @@
     "id": 134,
     "brand": "Zoologist",
     "name": "Tiger",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "spicy", "ru": "Пряные", "en": "Spicy", "de": "Würzig" },
@@ -2492,7 +2358,6 @@
     "id": 135,
     "brand": "Zoologist",
     "name": "Beaver",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "aquatic", "ru": "Акватические", "en": "Aquatic", "de": "Aquatisch" },
@@ -2511,7 +2376,6 @@
     "id": 136,
     "brand": "Zoologist",
     "name": "Tyrannosaurus Rex",
-    "rating": 0,
     "group": [
       { "id": "smoky", "ru": "Дымные", "en": "Smoky", "de": "Rauchig" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
@@ -2530,7 +2394,6 @@
     "id": 137,
     "brand": "Zoologist",
     "name": "Harvest Mouse",
-    "rating": 0,
     "group": [
       { "id": "sweet", "ru": "Сладкие", "en": "Sweet", "de": "Süß" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
@@ -2549,7 +2412,6 @@
     "id": 138,
     "brand": "Ella K",
     "name": "Poeme De Sagano",
-    "rating": 0,
     "group": [
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
       { "id": "citrus", "ru": "Цитрусовые", "en": "Citrus", "de": "Zitrus" }
@@ -2566,7 +2428,6 @@
     "id": 139,
     "brand": "Zarkoperfume",
     "name": "Pink Molecule 090.09",
-    "rating": 0,
     "group": [
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
       { "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" },
@@ -2584,7 +2445,6 @@
     "id": 140,
     "brand": "Zarkoperfume",
     "name": "Inception",
-    "rating": 0,
     "group": [
       { "id": "citrus", "ru": "Цитрусовые", "en": "Citrus", "de": "Zitrus" },
       { "id": "marine", "ru": "Морские", "en": "Marine", "de": "Maritim" },
@@ -2602,7 +2462,6 @@
     "id": 141,
     "brand": "OHTOP Paris",
     "name": "Fleur d'Oh",
-    "rating": 0,
     "group": [
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
       { "id": "citrus", "ru": "Цитрусовые", "en": "Citrus", "de": "Zitrus" }
@@ -2618,7 +2477,6 @@
     "id": 142,
     "brand": "Bon Parfumeur",
     "name": "106",
-    "rating": 0,
     "group": [
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
       { "id": "musky", "ru": "Мускусные", "en": "Musky", "de": "Moschusartig" }
@@ -2635,7 +2493,6 @@
     "id": 143,
     "brand": "Bon Parfumeur",
     "name": "801",
-    "rating": 0,
     "group": [
       { "id": "aquatic", "ru": "Акватические", "en": "Aquatic", "de": "Aquatisch" },
       { "id": "citrus", "ru": "Цитрусовые", "en": "Citrus", "de": "Zitrus" }
@@ -2653,7 +2510,6 @@
     "id": 144,
     "brand": "L'Orchestre Parfum",
     "name": "The Darbouka",
-    "rating": 0,
     "group": [
       { "id": "spicy", "ru": "Пряные", "en": "Spicy", "de": "Würzig" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" }
@@ -2670,7 +2526,6 @@
     "id": 145,
     "brand": "L'Orchestre Parfum",
     "name": "Electro Limonade",
-    "rating": 0,
     "group": [
       { "id": "citrus", "ru": "Цитрусовые", "en": "Citrus", "de": "Zitrus" },
       { "id": "aromatic", "ru": "Фужерные", "en": "Aromatic", "de": "Aromatisch" }
@@ -2688,7 +2543,6 @@
     "id": 146,
     "brand": "Essential Parfums",
     "name": "Bois Imperial",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "aromatic", "ru": "Фужерные", "en": "Aromatic", "de": "Aromatisch" },
@@ -2707,7 +2561,6 @@
     "id": 147,
     "brand": "Carthusia",
     "name": "Fiori di Capri",
-    "rating": 0,
     "group": [
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
       { "id": "chypre", "ru": "Шипровые", "en": "Chypre", "de": "Chypre" }
@@ -2725,7 +2578,6 @@
     "id": 148,
     "brand": "Carthusia",
     "name": "Capri Forget Me Not",
-    "rating": 0,
     "group": [
       { "id": "citrus", "ru": "Цитрусовые", "en": "Citrus", "de": "Zitrus" },
       { "id": "aromatic", "ru": "Фужерные", "en": "Aromatic", "de": "Aromatisch" }
@@ -2743,7 +2595,6 @@
     "id": 149,
     "brand": "Maison Margiela",
     "name": "Replica Matcha Meditation",
-    "rating": 0,
     "group": [
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
@@ -2762,7 +2613,6 @@
     "id": 150,
     "brand": "Van Cleef & Arpels",
     "name": "The Amara",
-    "rating": 0,
     "group": [
       { "id": "green", "ru": "Зеленые", "en": "Green", "de": "Grün" },
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" }
@@ -2780,7 +2630,6 @@
     "id": 151,
     "brand": "Kerosene Fragrances",
     "name": "Unknown Pleasures",
-    "rating": 0,
     "group": [
       { "id": "sweet", "ru": "Сладкие", "en": "Sweet", "de": "Süß" },
       { "id": "citrus", "ru": "Цитрусовые", "en": "Citrus", "de": "Zitrus" },
@@ -2799,7 +2648,6 @@
     "id": 152,
     "brand": "Parle Moi de Parfum",
     "name": "Wake Up World",
-    "rating": 0,
     "group": [
       { "id": "citrus", "ru": "Цитрусовые", "en": "Citrus", "de": "Zitrus" },
       { "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" },
@@ -2817,7 +2665,6 @@
     "id": 153,
     "brand": "Etat Libre D'Orange",
     "name": "I Am Trash",
-    "rating": 0,
     "group": [
       { "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" },
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
@@ -2835,7 +2682,6 @@
     "id": 154,
     "brand": "19-69",
     "name": "Female Christ",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "earthy", "ru": "Землистые", "en": "Earthy", "de": "Erdig" },
@@ -2854,7 +2700,6 @@
     "id": 155,
     "brand": "Lubin",
     "name": "Gin Fizz",
-    "rating": 0,
     "group": [
       { "id": "citrus", "ru": "Цитрусовые", "en": "Citrus", "de": "Zitrus" },
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" }
@@ -2872,7 +2717,6 @@
     "id": 156,
     "brand": "Killian",
     "name": "Sacred Wood",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "lactonic", "ru": "Лактонные", "en": "Lactonic", "de": "Laktonisch" }
@@ -2889,7 +2733,6 @@
     "id": 157,
     "brand": "Davidoff",
     "name": "Cool Water",
-    "rating": 0,
     "group": [
       { "id": "aquatic", "ru": "Акватические", "en": "Aquatic", "de": "Aquatisch" },
       { "id": "aromatic", "ru": "Фужерные", "en": "Aromatic", "de": "Aromatisch" }
@@ -2907,7 +2750,6 @@
     "id": 158,
     "brand": "Chanel",
     "name": "No 5",
-    "rating": 0,
     "group": [
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
       { "id": "aldehydic", "ru": "Альдегидные", "en": "Aldehydic", "de": "Aldehydisch" }
@@ -2925,7 +2767,6 @@
     "id": 159,
     "brand": "Teo Cabanel",
     "name": "Encore",
-    "rating": 0,
     "group": [
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
       { "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" },
@@ -2944,7 +2785,6 @@
     "id": 160,
     "brand": "Tom Ford",
     "name": "Ombré Leather",
-    "rating": 0,
     "group": [
       { "id": "leather", "ru": "Кожаные", "en": "Leather", "de": "Leder" },
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
@@ -2963,7 +2803,6 @@
     "id": 161,
     "brand": "Givenchy",
     "name": "L'Interdit",
-    "rating": 0,
     "group": [
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
       { "id": "white_floral", "ru": "Белоцветочные", "en": "White Floral", "de": "Weiße Blüten" },
@@ -2982,7 +2821,6 @@
     "id": 162,
     "brand": "Reinvented",
     "name": "Eureka",
-    "rating": 0,
     "group": [
       { "id": "spicy", "ru": "Пряные", "en": "Spicy", "de": "Würzig" },
       { "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" },
@@ -3001,7 +2839,6 @@
     "id": 163,
     "brand": "Henrik Vibskov",
     "name": "L’eau rouge Heirloom",
-    "rating": 0,
     "group": [
       { "id": "woody", "ru": "Древесные", "en": "Woody", "de": "Holzig" },
       { "id": "spicy", "ru": "Пряные", "en": "Spicy", "de": "Würzig" },
@@ -3020,7 +2857,6 @@
     "id": 164,
     "brand": "d'Annam",
     "name": "Mooncake",
-    "rating": 0,
     "group": [{ "id": "gourmand", "ru": "Гурманские", "en": "Gourmand", "de": "Gourmand" }],
     "notes": [
       { "id": "golden_syrup", "ru": "Золотой сироп", "en": "Golden Syrup", "de": "Goldener Sirup" },
@@ -3035,7 +2871,6 @@
     "id": 165,
     "brand": "d'Annam",
     "name": "Pomelo Oolong",
-    "rating": 0,
     "group": [{ "id": "citrus", "ru": "Цитрусовые", "en": "Citrus", "de": "Zitrus" }],
     "notes": [
       { "id": "oolong_tea", "ru": "Чай улун", "en": "Oolong Tea", "de": "Oolong-Tee" },
@@ -3049,7 +2884,6 @@
     "id": 166,
     "brand": "d'Annam",
     "name": "Princess of China",
-    "rating": 0,
     "group": [{ "id": "floral", "ru": "Цветочные", "en": "Floral", "de": "Blumig" }],
     "notes": [
       { "id": "peony", "ru": "Пион", "en": "Peony", "de": "Pfingstrose" },
@@ -3063,7 +2897,6 @@
     "id": 167,
     "brand": "d'Annam",
     "name": "Spring Festival",
-    "rating": 0,
     "group": [{ "id": "fruity", "ru": "Фруктовые", "en": "Fruity", "de": "Fruchtig" }],
     "notes": [
       { "id": "plum_blossom", "ru": "Цветок сливы", "en": "Plum Blossom", "de": "Pflaumenblüte" },
@@ -3077,7 +2910,6 @@
     "id": 168,
     "brand": "d'Annam",
     "name": "The Silk Road",
-    "rating": 0,
     "group": [{ "id": "spicy", "ru": "Пряные", "en": "Spicy", "de": "Würzig" }],
     "notes": [
       { "id": "spices", "ru": "Специи", "en": "Spices", "de": "Gewürze" },
@@ -3091,7 +2923,6 @@
     "id": 169,
     "brand": "d'Annam",
     "name": "Chinese Calligraphy",
-    "rating": 0,
     "group": [{ "id": "coffee", "ru": "Кофейные", "en": "Coffee", "de": "Kaffee" }],
     "notes": [
       { "id": "coffee", "ru": "Кофе", "en": "Coffee", "de": "Kaffee" },

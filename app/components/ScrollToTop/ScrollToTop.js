@@ -1,6 +1,6 @@
 "use client";
 
-import styles from './ScrollToTop.module.css';
+import styles from './ScrollToTop.module.scss';
 import { useState, useEffect } from 'react';
 import { i18n } from "@/i18n";
 import { useAppSettingsStore } from "@/store/useAppSettingsStore";

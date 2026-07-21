@@ -1,11 +1,12 @@
 "use client";
 
-import styles from "./LoadCollectionPopup.module.css";
+import styles from "./LoadCollectionPopup.module.scss";
 import { i18n } from "@/i18n";
 import { useRef } from "react";
 import { useAppSettingsStore } from "@/store/useAppSettingsStore";
 import { useItemsStore } from "@/store/useItemsStore";
 import { useToastStore } from "@/store/useToastStore";
+import { useFilterStore } from '@/store/useFilterStore';
 import Popup from "@/components/common/Popup/Popup";
 import Button from "@/components/common/Button/Button";
 
@@ -13,11 +14,13 @@ export default function LoadCollectionPopup({ isOpen, onClose }) {
     const { locale, setIsExpanded } = useAppSettingsStore();
     const { addToast } = useToastStore();
     const { loadDefault, setItems } = useItemsStore();
+    const { resetAllFilters } = useFilterStore();
 
     const fileInputRef = useRef(null);
 
     const confirmLoadFromDefault = () => {
         loadDefault();
+        resetAllFilters();
         onClose();
         setIsExpanded(false);
 
@@ -61,7 +64,7 @@ export default function LoadCollectionPopup({ isOpen, onClose }) {
                         label={i18n[locale]?.cancelLoadCollection}
                         onClick={onClose}
                     />
-                    <div className={styles.buttonWrapper}>
+                    <div className={styles.actionWrapper}>
                         <Button
                             className="button"
                             label={i18n[locale]?.importFromJson}

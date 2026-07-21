@@ -1,9 +1,0 @@
-.buttonWrapper {
-    display: flex;
-    flex-flow: column;
-    align-items: end;
-}
-
-.buttonWrapper button {
-    align-self: end;
-}

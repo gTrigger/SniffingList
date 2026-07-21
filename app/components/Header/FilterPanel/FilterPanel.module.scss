@@ -1,0 +1,13 @@
+.filterPanel {
+    display: flex;
+    gap: var(--base-spacing-unit-4x);
+    transition: padding 0.3s ease, border-color 0.3s ease;
+    flex-direction: column;
+
+    .panelRow {
+        display: flex;
+        gap: var(--base-spacing-unit-4x);
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}

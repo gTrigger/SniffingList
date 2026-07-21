@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./Button.module.css";
+import styles from "./Button.module.scss";
 import CancelIcon from "@/components/common/icons/CancelIcon";
 
 const iconLibrary = {

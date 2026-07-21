@@ -54,6 +54,8 @@ export const i18n = {
         cancelAddPerfume: "Отмена",
         retryAddPerfume: "Перепроверить",
         confirmAddPerfume: "Оно, добавляем",
+        warning: "Обратите внимание",
+        dataDisclaimer: "Бесплатные языковые модели могут работать медленнее, совершать ошибки или не обладать полной информацией. Информация о нотах и группах парфюма добавляется только при наличии подтвержденных данных.",
 
         // load collection
         loadCollection: "Загрузить коллекцию",
@@ -74,12 +76,14 @@ export const i18n = {
 
         // notification
         genericError: "Ошибка: что-то пошло не так",
+        perfumeNotFoundError: "Ошибка: парфюм не найден",
         jsonWrongFormatError: "Ошибка: неправильный формат JSON",
         jsonReadingError: "Ошибка: чтение из JSON не удалось",
         loadingError: "Ошибка: загрузка не удалась",
         apiKeyMissingError: "Ошибка: API ключ отсутствует",
         perfumeDuplicationError: "Ошибка: парфюм с таким названием уже существует в базе",
         getPerfumeDataError: "Ошибка: что-то пошло не так при запросе данных у ИИ",
+        serviceOverloadedError: "Ошибка: Сервис перегружен. Пожалуйста, попробуйте позже.",
         clearCollectionSuccess: "Успех: коллекция была очищена",
         addPerfumeSuccess: "Успех: новый парфюм был добавлен",
         removePerfumeSuccess: "Успех: парфюм был удален из коллекции",
@@ -143,6 +147,8 @@ export const i18n = {
         cancelAddPerfume: "Cancel",
         retryAddPerfume: "Recheck",
         confirmAddPerfume: "That's it, add it",
+        warning: "Please note",
+        dataDisclaimer: "Free language models may work slower, make mistakes, or lack complete information. Information about fragrance notes and families is added only when verified data is available.",
 
         // load collection
         loadCollection: "Load collection",
@@ -163,18 +169,20 @@ export const i18n = {
 
         // notification
         genericError: "Error: something went wrong",
+        perfumeNotFoundError: "Error: perfume not found",
         jsonWrongFormatError: "Error: incorrect JSON format",
         jsonReadingError: "Error: reading from JSON went wrong",
         loadingError: "Error: loading went wrong",
         apiKeyMissingError: "Error: API key missing",
         perfumeDuplicationError: "Error: perfume with such name already exists",
         getPerfumeDataError: "Error: something went wrong while retrieving data from AI",
+        serviceOverloadedError: "Error: The service is overloaded. Please try again later.",
         clearCollectionSuccess: "Success: collection was cleared",
         addPerfumeSuccess: "Success: new perfume was added",
         removePerfumeSuccess: "Success: the perfume has been removed from the collection",
         importFromJsonSuccess: "Success: JSON collection imported",
         loadFromDefaultSuccess: "Success: default collection loaded",
-        removeNotification: "Close notification"
+        removeNotification: "Close notification",
     },
     de: {
         // general
@@ -224,6 +232,8 @@ export const i18n = {
         cancelAddPerfume: "Abbrechen",
         retryAddPerfume: "Erneut prüfen",
         confirmAddPerfume: "Ja, hinzufügen",
+        warning: "Bitte beachten Sie",
+        dataDisclaimer: "Kostenlose Sprachmodelle arbeiten möglicherweise langsamer, machen Fehler oder verfügen nicht über vollständige Informationen. Angaben zu Duftnoten und -familien werden nur hinzugefügt, wenn verifizierte Daten vorliegen.",
 
         // remove perfume
         removePerfume: "Parfum entfernen",
@@ -251,12 +261,14 @@ export const i18n = {
 
         // notification
         genericError: "Fehler: Etwas ist schiefgelaufen",
+        perfumeNotFoundError: "Fehler: Parfüm nicht gefunden",
         jsonWrongFormatError: "Fehler: Falsches JSON-Format",
         jsonReadingError: "Fehler: Lesen der JSON-Datei fehlgeschlagen",
         loadingError: "Fehler: Laden fehlgeschlagen",
         apiKeyMissingError: "Fehler: API-Schlüssel fehlt",
         perfumeDuplicationError: "Fehler: Ein Parfum mit diesem Namen existiert bereits",
         getPerfumeDataError: "Fehler: Fehler bei der Datenabfrage von der KI",
+        serviceOverloadedError: "Fehler: Der Dienst ist überlastet. Bitte versuchen Sie es später noch einmal.",
         clearCollectionSuccess: "Erfolg: Sammlung wurde geleert",
         addPerfumeSuccess: "Erfolg: Neues Parfum wurde hinzugefügt",
         removePerfumeSuccess: "Erfolg: Das Parfüm wurde aus der Sammlung entfernt",

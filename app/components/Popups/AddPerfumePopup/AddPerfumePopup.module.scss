@@ -1,0 +1,24 @@
+.addPerfumePopup {
+    .addPerfumeForm {
+        display: flex;
+        gap: var(--base-spacing-unit-8x);
+        flex-wrap: wrap;
+    }
+
+    video {
+        max-width: 300px;
+        max-height: 300px;
+        margin: auto;
+        margin-top: var(--base-spacing-unit-8x);
+    }
+
+    .previewCard {
+        align-self: center;
+        margin-bottom: var(--base-spacing-unit-12x);
+        font-family: var(--primary-font);
+    }
+
+    .previewSubtitle {
+        margin: var(--base-spacing-unit-4x) 0;
+    }
+}

@@ -4,6 +4,7 @@ import { i18n } from "@/i18n";
 import { useAppSettingsStore } from "@/store/useAppSettingsStore";
 import { useItemsStore } from "@/store/useItemsStore";
 import { useToastStore } from "@/store/useToastStore";
+import { useFilterStore } from '@/store/useFilterStore';
 import Popup from "@/components/common/Popup/Popup";
 import Button from "@/components/common/Button/Button";
 
@@ -11,9 +12,11 @@ export default function ClearCollectionPopup({ isOpen, onClose }) {
     const { locale, setIsExpanded } = useAppSettingsStore();
     const { addToast } = useToastStore();
     const { removeAll } = useItemsStore();
+    const { resetAllFilters } = useFilterStore();
 
     const confirmClearCollection = () => {
         removeAll();
+        resetAllFilters();
         onClose();
         setIsExpanded(false);
 

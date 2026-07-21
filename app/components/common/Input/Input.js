@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./Input.module.css";
+import styles from "./Input.module.scss";
 
 export default function Input({
     value,

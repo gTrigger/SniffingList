@@ -1,7 +1,7 @@
 "use client";
 
-import styles from "./ParallaxCard.module.css";
-import { useRef, useEffect, useState } from "react";
+import styles from "./ParallaxCard.module.scss";
+import { useRef, useEffect, useState, useMemo } from "react";
 import { i18n } from "@/i18n";
 import { useAppSettingsStore } from "@/store/useAppSettingsStore";
 import TagList from "./TagList/TagList";
@@ -104,10 +104,14 @@ export default function ParallaxCard({ item, onDeleteClick, className = '' }) {
         };
     }, []);
 
+    const hasGroups = useMemo(() => Array.isArray(item.group) && item.group.length > 0, [item.group]);
+    const hasNotes = useMemo(() => Array.isArray(item.notes) && item.notes.length > 0, [item.notes]);
+    const hasNoGroupsAndNotes = !hasGroups && !hasNotes;
+
     return (
         <>
             <div
-                className={`${styles.cardWrap} ${className}`.trim()}
+                className={`${styles.cardWrapper} ${hasNoGroupsAndNotes ? styles.empty : ''} ${className}`.trim()}
                 ref={wrapRef}
                 onMouseMove={handleMouseMove}
                 onMouseEnter={handleMouseEnter}
@@ -128,7 +132,7 @@ export default function ParallaxCard({ item, onDeleteClick, className = '' }) {
 
                 <div className={styles.card} ref={cardRef}>
                     <div
-                        className={styles.cardBg}
+                        className={styles.cardBackground}
                         ref={bgRef}
                         style={{ backgroundImage: `url(${currentImage})` }}
                     ></div>
@@ -139,15 +143,19 @@ export default function ParallaxCard({ item, onDeleteClick, className = '' }) {
                             <h3 className={`${styles.perfumeTitle}`}>{item.name}</h3>
                         </div>
 
-                        <div className={styles.cardSlideContent}>
-                            <div className={styles.tagsInner}>
-                                <p className={styles.tagHeading}>{i18n[locale]?.groups}</p>
-                                <TagList items={item.group?.map(g => g[locale])} />
-                            </div>
-                            <div className={styles.tagsInner}>
-                                <p className={styles.tagHeading}>{i18n[locale]?.notes}</p>
-                                <TagList items={item.notes?.map(n => n[locale])} />
-                            </div>
+                        <div className={styles.slideContentWrapper}>
+                            {hasGroups && (
+                                <div className={styles.tagsWrapper}>
+                                    <p className={styles.tagsHeader}>{i18n[locale]?.groups}</p>
+                                    <TagList items={item.group?.slice(0, 3).map(g => g[locale])} />
+                                </div>
+                            )}
+                            {hasNotes && (
+                                <div className={styles.tagsWrapper}>
+                                    <p className={styles.tagsHeader}>{i18n[locale]?.notes}</p>
+                                    <TagList items={item.notes?.slice(0, 6).map(n => n[locale])} />
+                                </div>
+                            )}
                         </div>
                     </div>
 

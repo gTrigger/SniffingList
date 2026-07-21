@@ -1,0 +1,195 @@
+.cardWrapper {
+    --card-width: 250px;
+    --card-height: 300px;
+    --slide-content-height: 150px;
+    --header-top-position: 10px;
+    --card-background-perspective: 600px;
+    --card-background-margin: 20px;
+    --card-shadow: rgba(0, 0, 0, 0.66) 0 10px 20px 0;
+    --card-gradient: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, 0.85) 100%);
+    --hover-easing: cubic-bezier(0.23, 1, 0.32, 1);
+    --return-easing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+    cursor: initial;
+    width: var(--card-width);
+    border-radius: var(--default-border-radius);
+    margin: 0;
+    transform: perspective(var(--card-background-perspective));
+    transform-style: preserve-3d;
+
+    .removeButton {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        color: rgba(var(--secondary-font-color), var(--primary-opacity));
+        border: none;
+        cursor: pointer;
+        z-index: 100;
+        background: none;
+        transform: translateZ(50px);
+        opacity: 0;
+        filter: invert(100%) brightness(500%);
+        font-family: var(--accent-font);
+        font-size: 30px;
+        transition: 0.4s;
+
+        &:hover {
+            color: rgba(var(--secondary-font-color), var(--primary-opacity));
+        }
+
+        &:focus {
+            opacity: 1;
+            border: none;
+        }
+    }
+
+    .card {
+        width: 100%;
+        height: var(--card-height);
+        border-radius: var(--default-border-radius);
+        box-shadow: var(--card-shadow);
+        position: relative;
+        overflow: hidden;
+        background-clip: padding-box;
+        transition: transform 1s var(--return-easing), box-shadow 1s var(--return-easing);
+
+        .cardBackground {
+            pointer-events: none;
+            width: calc(100% + 40px);
+            height: calc(100% + 40px);
+            top: -20px;
+            left: -20px;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            animation: fadeInBg 0.4s ease-in-out;
+            transition: 1s var(--return-easing), opacity 1s var(--return-easing);
+        }
+
+        .cardContent {
+            width: 100%;
+            padding: var(--base-spacing-unit-8x);
+            top: var(--slide-content-height);
+            left: 0;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            gap: var(--base-spacing-unit-4x);
+            box-sizing: border-box;
+            z-index: 2;
+            color: rgba(var(--secondary-font-color), var(--primary-opacity));
+            transition: top 0.6s var(--hover-easing);
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: calc(var(--header-top-position) * -1);
+                left: 0;
+                z-index: -1;
+                width: 100%;
+                height: var(--card-height);
+                background-image: var(--card-gradient);
+                opacity: 1;
+                transition: none;
+            }
+
+            .perfumeBrand {
+                font-family: "Arial", sans-serif;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                opacity: 0.8;
+                font-size: var(--secondary-font-size);
+            }
+
+            .perfumeTitle {
+                font-family: var(--primary-font);
+                font-weight: 400;
+                margin: 0;
+                font-size: var(--primary-font-size);
+            }
+
+            .slideContentWrapper {
+                opacity: 0;
+                max-height: 0;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                gap: var(--base-spacing-unit-4x);
+                transition: all 0.6s var(--hover-easing);
+
+                .tagsWrapper {
+                    display: flex;
+                    flex-direction: column;
+                    box-sizing: border-box;
+                    gap: var(--base-spacing-unit-4x);
+
+                    .tagsHeader {
+                        font-family: var(--primary-font);
+                        font-size: var(--quaternary-font-size);
+                        color: rgba(var(--secondary-font-color), var(--secondary-opacity));
+                        margin: 0;
+                        text-transform: uppercase;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover, &:focus {
+        .removeButton {
+            opacity: 1;
+        }
+
+        .card {
+            transition: 0.6s var(--hover-easing);
+
+            .cardBackground {
+                opacity: 1;
+                transition: 0.6s var(--hover-easing), opacity 1s var(--hover-easing);
+            }
+
+            .cardContent {
+                top: var(--header-top-position);
+
+                .slideContentWrapper {
+                    opacity: 1;
+                    max-height: var(--card-height);
+                }
+            }
+        }
+    }
+
+    &.empty:hover, &.empty:focus {
+        .card {
+            .cardContent {
+                top: var(--slide-content-height);
+            }
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cardWrapper {
+        perspective: none;
+    }
+    .card, .cardBackground {
+        transition: none !important;
+        transform: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .cardWrapper {
+        --card-width: 300px;
+        --card-height: 200px;
+        --slide-content-height: 100px;
+    }
+
+    .cardWrapper .removeButton {
+        top: 20px;
+        right: 25px;
+        font-size: 25px;
+    }
+}

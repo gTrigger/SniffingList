@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./LanguageSelector.module.css";
+import styles from "./LanguageSelector.module.scss";
 import Button from "@/components/common/Button/Button";
 import { useAppSettingsStore } from "@/store/useAppSettingsStore";
 
@@ -19,7 +19,7 @@ export default function LanguageSelector() {
                     <div key={lang}>
                         <Button
                             label={lang.toUpperCase()}
-                            className={`${styles.button} ${isActive ? styles.active : ""}`.trim()}
+                            className={`${styles.languageButton} ${isActive ? styles.active : ""}`.trim()}
                             onClick={() => setLocale(lang)}
                         />
                         {!isLast && <span>/</span>}

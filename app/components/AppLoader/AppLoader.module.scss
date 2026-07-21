@@ -1,0 +1,28 @@
+.loaderContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    color: rgba(var(--primary-font-color), var(--primary-opacity));
+    font-family: var(--primary-font);
+    font-size: var(--secondary-font-size);
+
+    video {
+        width: 300px;
+        height: 300px;
+    }
+
+    .dots::after {
+        content: '.';
+        display: inline-block;
+        width: 20px;
+        text-align: left;
+        animation: blinkDots 2s steps(4, end) infinite;
+    }
+}

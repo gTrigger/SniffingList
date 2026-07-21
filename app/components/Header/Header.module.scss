@@ -1,0 +1,102 @@
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background: white;
+    margin: 0 auto;
+    will-change: backdrop-filter, height, background;
+    background: var(--primary-blur-background);
+    backdrop-filter: var(--default-blur-filter);
+    transition: height 0.5s ease, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: top;
+
+    .panel {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: -webkit-fill-available;
+    }
+
+    .mainPanel {
+        display: flex;
+        flex-wrap: wrap;
+        padding: var(--base-spacing-unit-2x) var(--base-spacing-unit-16x);
+        row-gap: var(--base-spacing-unit-2x);
+        column-gap: var(--base-spacing-unit-4x);
+        justify-content: space-between;
+        padding-top: var(--base-spacing-unit-8x);
+
+        h1 {
+            font-family: var(--accent-font);
+            font-size: 90px;
+            margin: 0;
+        }
+    }
+
+    .secondaryPanel {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.3s ease-in-out, padding 0.3s ease-out;
+        padding: 0 var(--base-spacing-unit-16x);
+        overflow: hidden;
+        flex-grow: 1;
+
+        .expandablePanel {
+            display: flex;
+            flex-direction: column;
+            gap: var(--base-spacing-unit-16x);
+            min-height: 0;
+        }
+    }
+
+    &.open {
+        .secondaryPanel {
+            grid-template-rows: 1fr;
+            padding: var(--base-spacing-unit-8x) var(--base-spacing-unit-16x);
+
+            .expandablePanel {
+                overflow: visible;
+            }
+        }
+    }
+
+    .toggleButton {
+        background: none;
+        padding: var(--base-spacing-unit-4x);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: var(--icon-button-width);
+        height: var(--icon-button-height);
+        border: none;
+        color: rgba(var(--primary-font-color), var(--tertiary-opacity));
+        align-self: center;
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        font-family: var(--accent-font);
+        font-size: 50px;
+        transform: rotate(170deg);
+        padding-top: 40px;
+
+        &.active {
+            transform: rotate(0);
+        }
+
+        &:hover {
+            color: rgba(var(--primary-font-color), var(--primary-opacity));
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        .mainPanel {
+            h1 {
+                font-size: 50px;
+            }
+        }
+    }
+}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import styles from "./ControlPanel.module.css";
+import styles from "./ControlPanel.module.scss";
 import { i18n } from "@/i18n";
 import { useAppSettingsStore } from "@/store/useAppSettingsStore";
 import { useItemsStore } from "@/store/useItemsStore";

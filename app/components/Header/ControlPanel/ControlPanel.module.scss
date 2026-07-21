@@ -1,0 +1,12 @@
+.controlPanel {
+    display: flex;
+    gap: var(--base-spacing-unit-8x);
+    flex-direction: column;
+
+    .panelRow {
+        display: flex;
+        column-gap: var(--base-spacing-unit-8x);
+        row-gap: var(--base-spacing-unit-4x);
+        flex-wrap: wrap;
+    }
+}

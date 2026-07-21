@@ -1,0 +1,46 @@
+.selectWrapper {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    border-bottom: 1px solid black;
+
+    &.small {
+        width: 80px;
+    }
+
+    .select {
+        flex: 1;
+        width: 100%;
+        background: transparent;
+        padding: var(--base-spacing-unit-4x) var(--base-spacing-unit-8x);
+        padding-left: 0;
+        font-size: var(--secondary-font-size);
+        font-family: var(--primary-font);
+        text-indent: -2px;
+        cursor: pointer;
+        border-color: transparent;
+    }
+
+    .removeButton {
+        margin-left: var(--base-spacing-unit-2x);
+        vertical-align: middle;
+        color: rgba(var(--primary-font-color), var(--primary-opacity));
+
+        &:hover {
+            margin-left: var(--base-spacing-unit-2x);
+            vertical-align: middle;
+        }
+
+        svg {
+            width: 15px;
+            height: 15px;
+            vertical-align: middle;
+            margin-top: -1px;
+        }
+    }
+
+    .label {
+        visibility: hidden;
+        position: absolute;
+    }
+}

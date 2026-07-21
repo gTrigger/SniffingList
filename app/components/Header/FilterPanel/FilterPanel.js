@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState, useEffect } from "react";
-import styles from "./FilterPanel.module.css";
+import styles from "./FilterPanel.module.scss";
 import { i18n } from "@/i18n";
 import { useAppSettingsStore } from "@/store/useAppSettingsStore";
 import { useFilterStore } from "@/store/useFilterStore";
@@ -19,7 +19,8 @@ export default function FilterPanel() {
         sortOrder, setSortOrder,
         filterBrand, setFilterBrand,
         filterGroup, setFilterGroup,
-        filterNote, setFilterNote
+        filterNote, setFilterNote,
+        resetAllFilters
     } = useFilterStore();
 
     const [searchTerm, setSearchTerm] = useState(searchQuery);
@@ -57,13 +58,6 @@ export default function FilterPanel() {
             .from(new Map(items.flatMap(item => item.notes || []).map(n => [n[locale], n])).values())
             .sort((a, b) => a[locale].localeCompare(b[locale]));
     }, [items, locale]);
-
-    const resetAllFilters = () => {
-        setSearchQuery("");
-        setFilterBrand("");
-        setFilterGroup("");
-        setFilterNote("");
-    };
 
     return (
         <div className={styles.filterPanel}>
