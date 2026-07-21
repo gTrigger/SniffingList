@@ -18,7 +18,7 @@
 
     &[disabled] {
         pointer-events: none;
-        color: rgba(var(--button-color), var(--secondary-opacity));
+        color: rgba(var(--primary-font-color), var(--tertiary-opacity));
     }
 
     &:hover {

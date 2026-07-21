@@ -42,19 +42,17 @@ export default function ControlPanel() {
                     onClick={() => setActivePopup("loadCollection")}
                 />
 
-                {hasItems && (
-                    <>
-                        <Button
-                            label={i18n[locale]?.removeAll}
-                            onClick={() => setActivePopup("clearCollection")}
-                        />
+                <Button
+                  label={i18n[locale]?.removeAll}
+                  isDisabled={!hasItems}
+                  onClick={() => setActivePopup("clearCollection")}
+                />
 
-                        <Button
-                            label={i18n[locale]?.downloadCollection}
-                            onClick={exportToJson}
-                        />
-                    </>
-                )}
+                <Button
+                  label={i18n[locale]?.downloadCollection}
+                  isDisabled={!hasItems}
+                  onClick={exportToJson}
+                />
             </div>
 
             {activePopup === "addPerfume" && (
