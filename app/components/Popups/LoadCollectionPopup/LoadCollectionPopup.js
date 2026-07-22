@@ -11,7 +11,7 @@ import Popup from "@/components/common/Popup/Popup";
 import Button from "@/components/common/Button/Button";
 
 export default function LoadCollectionPopup({ isOpen, onClose }) {
-    const { locale, setIsExpanded } = useAppSettingsStore();
+    const { locale } = useAppSettingsStore();
     const { addToast } = useToastStore();
     const { loadDefault, setItems } = useItemsStore();
     const { resetAllFilters } = useFilterStore();
@@ -22,7 +22,6 @@ export default function LoadCollectionPopup({ isOpen, onClose }) {
         loadDefault();
         resetAllFilters();
         onClose();
-        setIsExpanded(false);
 
         return addToast(i18n[locale]?.loadFromDefaultSuccess, "success");
     };

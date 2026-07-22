@@ -1794,8 +1794,8 @@
       { "id": "cedar", "ru": "Кедр", "en": "Cedar", "de": "Zeder" },
       { "id": "lily_of_the_valley", "ru": "Ландыш", "en": "Lily of the Valley", "de": "Maiglöckchen" },
       { "id": "peach", "ru": "Персик", "en": "Peach", "de": "Pfirsich" },
-      { "id": "clove", "ru": "Гвоздика (пряность)", "en": "Clove", "de": "Gewürznelke" },
-      { "id": "vetiver", "ru": "Ветивер", "en": "Vetiver", "de": "Vetiver" }
+      { "id": "vetiver", "ru": "Ветивер", "en": "Vetiver", "de": "Vetiver" },
+      { "id": "clove", "ru": "Гвоздика (пряность)", "en": "Clove", "de": "Gewürznelke" }
     ]
   },
   {

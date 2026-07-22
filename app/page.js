@@ -62,19 +62,31 @@ function HomeContent() {
         removeItem(id);
     };
 
+    const hasLocalizedMatch = (array, query) => {
+        for (let i = 0; i < array.length; i++) {
+            const text = array[i]?.[locale];
+
+            if (text && text.toLowerCase().includes(query)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     const filteredItems = items.filter(item => {
         const query = searchQuery.toLowerCase();
-        const matchesQuery = !query ||
-            (item.name?.toLowerCase().includes(query)) ||
-            (item.brand?.toLowerCase().includes(query)) ||
-            (item.group?.some(g => g[locale]?.toLowerCase().includes(query))) ||
-            (item.notes?.some(n => n[locale]?.toLowerCase().includes(query)));
+        const matchesQuery =
+          !query ||
+          item.name?.toLowerCase().includes(query) ||
+          item.brand?.toLowerCase().includes(query) ||
+          (item.group && hasLocalizedMatch(item.group, query)) ||
+          (item.notes && hasLocalizedMatch(item.notes, query));
+        const matchesFilters =
+          (!filterBrand || item.brand === filterBrand) &&
+          (!filterGroup || item.flatGroups?.includes(filterGroup)) &&
+          (!filterNote || item.flatNotes?.includes(filterNote));
 
-        const matchesBrand = !filterBrand || item.brand === filterBrand;
-        const matchesGroup = !filterGroup || item.group?.some(g => g.en === filterGroup);
-        const matchesNote = !filterNote || item.notes?.some(n => n.en === filterNote);
-
-        return matchesQuery && matchesBrand && matchesGroup && matchesNote;
+        return matchesQuery && matchesFilters;
     }).sort((a, b) => {
         const nameA = `${a.brand} ${a.name}`.toLowerCase();
         const nameB = `${b.brand} ${b.name}`.toLowerCase();
@@ -86,13 +98,21 @@ function HomeContent() {
     const displayedItems = filteredItems.slice(0, visibleCount);
 
     const lastItemRef = useCallback((node) => {
-        if (observer.current) observer.current.disconnect();
+        const itemsPerPageCount = 12;
+
+        if (observer.current) {
+            observer.current.disconnect();
+        }
+
         observer.current = new IntersectionObserver(entries => {
             if (entries[0].isIntersecting && visibleCount < filteredItems.length) {
-                setVisibleCount(prev => prev + 12);
+                setVisibleCount(prev => prev + itemsPerPageCount);
             }
         });
-        if (node) observer.current.observe(node);
+
+        if (node) {
+            observer.current.observe(node);
+        }
     }, [visibleCount, filteredItems.length]);
 
     if (!isMounted) {
